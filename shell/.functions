@@ -1,0 +1,86 @@
+#!/bin/bash
+
+#
+#Set Colors
+#
+
+bold=$(tput bold)
+underline=$(tput sgr 0 1)
+reset=$(tput sgr0)
+
+purple=$(tput setaf 171)
+red=$(tput setaf 1)
+green=$(tput setaf 76)
+tan=$(tput setaf 3)
+blue=$(tput setaf 38)
+
+#
+# Headers and  Logging
+#
+
+e_header () {
+	printf "\n${bold}${purple}==========  %s  ==========${reset}\n" "$@"
+}
+
+e_arrow () {
+	printf "➜ $@\n"
+}
+
+e_success () {
+	printf "${green}✔ %s${reset}\n" "$@"
+}
+
+e_error () {
+	printf "${red}✖ %s${reset}\n" "$@"
+}
+
+e_warning () {
+	printf "${tan}➜ %s${reset}\n" "$@"
+}
+
+e_underline () {
+	printf "${underline}${bold}%s${reset}\n" "$@"
+}
+
+e_bold () {
+	printf "${bold}%s${reset}\n" "$@"
+}
+
+e_note () {
+	printf "${underline}${bold}${blue}Note:${reset}  ${blue}%s${reset}\n" "$@"
+}
+
+v-proc () {
+	DIR=$(pwd);
+	cd ~/Code/ebt_procurement/project_resources/vagrant-netto;
+	vagrant "$1";
+	cd $DIR;
+}
+
+v-api () {
+	DIR=$(pwd);
+	cd ~/Code/ebt_procurement/project_resources/vagrant-netto;
+	vagrant "$1";
+	cd $DIR;
+}
+
+# rm with force and recursive
+rr () {
+	rm -fr $1;
+	e_success "Arquivo deletado com sucesso"
+}
+
+# git sync
+git-sync () {
+	BRANCH=$(git symbolic-ref HEAD | sed 's!refs\/heads\/!!');
+	git stash;
+	e_success "stash"
+	git checkout master;
+	e_success "checkout"
+	git pull origin master;
+	git checkout $BRANCH;
+	git merge master;
+	e_success "merge"
+	git stash pop;
+	e_success "stash pop"
+}
