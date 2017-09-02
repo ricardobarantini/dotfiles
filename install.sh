@@ -8,10 +8,14 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 # Installing Antigen
 curl -L git.io/antigen > antigen.zsh
 
-FILES=/dotfiles/shell/*
-for f in $FILES
-do
-  echo "Processing $f file..."
-  # take action on each file. $f store current file name
-  cp $f ~
-done
+# Installing Powerline fonts
+git clone https://github.com/powerline/fonts.git --depth=1
+cd fonts
+./install.sh
+cd ..
+rm -rf fonts
+
+# Copying shell files
+cp dotfiles/shell/.functions ~
+cp dotfiles/shell/.profile ~
+cp dotfiles/shell/.zshrc ~
