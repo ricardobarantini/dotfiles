@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-#Set Colors
+# Set Colors
 #
 
 bold=$(tput bold)
@@ -52,7 +52,7 @@ e_note () {
 
 v-proc () {
 	DIR=$(pwd);
-	cd ~/Code/ebt_procurement/project_resources/vagrant-netto;
+	cd ~/Code/ebt_procurement/project_resources/vagrant-ricardo;
 	vagrant "$1";
 	cd $DIR;
 }
