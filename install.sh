@@ -15,6 +15,9 @@ cd fonts
 cd ..
 rm -rf fonts
 
+# Defining powerline font
+gsettings set org.pantheon.terminal.settings font 'Meslo LG S for Powerline Regular 10'
+
 # Copying shell files
 cp dotfiles/shell/.functions ~
 cp dotfiles/shell/.profile ~
