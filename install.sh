@@ -1,6 +1,10 @@
 #!/bin/bash
 
+DOTFILES_FOLDER=$(pwd)
+
 cd ~
+
+HOME_DIR=$(pwd)
 
 # Installing Oh-my-zsh
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
@@ -19,7 +23,7 @@ curl -L git.io/antigen > antigen.zsh
 # gsettings set org.pantheon.terminal.settings font 'Meslo LG S for Powerline Regular 10'
 
 # Copying shell files
-cp ./shell/.functions ~
-cp ./shell/.profile ~
-cp ./shell/.zshrc ~
-cp ./shell/.hyper.js ~
+cp $DOTFILES_FOLDER/shell/.functions $HOME_DIR
+cp $DOTFILES_FOLDER/shell/.profile $HOME_DIR
+cp $DOTFILES_FOLDER/shell/.zshrc $HOME_DIR
+cp $DOTFILES_FOLDER/shell/.hyper.js $HOME_DIR
