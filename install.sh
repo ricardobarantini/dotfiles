@@ -19,7 +19,7 @@ curl -L git.io/antigen > antigen.zsh
 # gsettings set org.pantheon.terminal.settings font 'Meslo LG S for Powerline Regular 10'
 
 # Copying shell files
-cp shell/.functions ~
-cp shell/.profile ~
-cp shell/.zshrc ~
-cp shell/.hyper.js ~
+cp ./shell/.functions ~
+cp ./shell/.profile ~
+cp ./shell/.zshrc ~
+cp ./shell/.hyper.js ~

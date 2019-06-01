@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+alias p="cd $HOME/Projects"
+alias dl="cd $HOME/Downloads"
+alias m="cd $HOME/MEGA"
+
+docker-ssh() {
+    if [ -n "$1" ]
+    then
+        docker exec -it "$1" bash
+    fi
+}
