@@ -50,20 +50,6 @@ e_note () {
 	printf "${underline}${bold}${blue}Note:${reset}  ${blue}%s${reset}\n" "$@"
 }
 
-v-proc () {
-	DIR=$(pwd);
-	cd ~/Code/ebt_procurement/project_resources/vagrant-ricardo;
-	vagrant "$1";
-	cd $DIR;
-}
-
-v-api () {
-	DIR=$(pwd);
-	cd ~/Code/ebt_procurement/project_resources/vagrant-netto;
-	vagrant "$1";
-	cd $DIR;
-}
-
 # rm with force and recursive
 rr () {
 	rm -fr $1;
