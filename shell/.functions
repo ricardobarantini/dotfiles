@@ -84,3 +84,10 @@ git-sync () {
 	git stash pop;
 	e_success "stash pop"
 }
+
+docker-ssh() {
+    if [ -n "$1" ]
+    then
+        docker exec -it "$1" bash
+    fi
+}
