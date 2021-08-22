@@ -104,13 +104,13 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
 source $HOME/.functions
 
-export COMPOSER_PATH=/home/ricardo/.config/composer/vendor/bin
-export YARN_PATH=/home/ricardo/.yarn/bin
+export COMPOSER_PATH=$HOME/.config/composer/vendor/bin
+export YARN_PATH=$HOME/.yarn/bin
 export FLUTTER_PATH=/usr/local/bin/flutter/bin
 
 export PATH=$PATH:$YARN_PATH:$COMPOSER_PATH:$FLUTTER_PATH
 
-DEFAULT_USER=ricardo
+DEFAULT_USER=$USER
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
