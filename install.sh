@@ -2,15 +2,19 @@
 
 DOTFILES_FOLDER=$(pwd)
 
-cd ~
+cd "$HOME" || exit
 
 HOME_DIR=$(pwd)
 
-# Installing Oh-my-zsh
-sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+if [ ! -d $HOME/.oh-my-zsh ]; then
+  # Installing Oh-my-zsh
+  sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+fi
 
-# Installing Antigen
-curl -L git.io/antigen > antigen.zsh
+if [ ! -a $HOME/.antigen ]; then
+  # Installing Antigen
+  curl -L git.io/antigen > .antigen.zsh
+fi
 
 # Installing Powerline fonts
 # git clone https://github.com/powerline/fonts.git --depth=1
@@ -23,11 +27,14 @@ curl -L git.io/antigen > antigen.zsh
 # gsettings set org.pantheon.terminal.settings font 'Meslo LG S for Powerline Regular 10'
 
 # Copying shell files
-cp $DOTFILES_FOLDER/shell/.functions $HOME_DIR
-cp $DOTFILES_FOLDER/shell/.profile $HOME_DIR
-cp $DOTFILES_FOLDER/shell/.zshrc $HOME_DIR
-cp $DOTFILES_FOLDER/shell/.hyper.js $HOME_DIR
-cp $DOTFILES_FOLDER/shell/.aliases $HOME_DIR
+cd shell || exit
 
-# Reloads file
+for file in \.*; do
+  [ -e $file ] || continue
+  cp $file $HOME_DIR
+done
+
+cd $DOTFILES_FOLDER || exit
+
+# Reloads .zshrc file
 source $HOME/.zshrc
