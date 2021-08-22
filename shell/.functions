@@ -64,14 +64,22 @@ docker-ssh() {
 
 vpn () {
   if [ -n "$1" -a "$1" = "c" ]; then
+    if [ -n "$2" ]; then
+      nordvpn c $2
+      return
+    fi
+
     nordvpn c
+    return
   fi
 
   if [ -n "$1" -a "$1" = "d" ]; then
     nordvpn d
+    return
   fi
 
   if [ ! -n "$1" -o "$1" = "s" -o "$1" = "status" ]; then
     nordvpn status
+    return
   fi
 }
