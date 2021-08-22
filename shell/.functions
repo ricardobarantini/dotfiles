@@ -52,23 +52,7 @@ e_note () {
 
 # rm with force and recursive
 rr () {
-	rm -fr $1;
-	e_success "Arquivo deletado com sucesso"
-}
-
-# git sync
-git-sync () {
-	BRANCH=$(git symbolic-ref HEAD | sed 's!refs\/heads\/!!');
-	git stash;
-	e_success "stash"
-	git checkout master;
-	e_success "checkout"
-	git pull origin master;
-	git checkout $BRANCH;
-	git merge master;
-	e_success "merge"
-	git stash pop;
-	e_success "stash pop"
+	rm -fr $1
 }
 
 docker-ssh() {
