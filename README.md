@@ -17,7 +17,7 @@ Repositório contendo meus dotfiles personalizados.
 
 `sudo chmod +x install.sh`
 
-`./install.sh`
+`zsh ./install.sh`
 
 ## Referências
 
