@@ -1,5 +1,5 @@
 # antigen
-source ~/antigen.zsh
+source ~/.antigen.zsh
 antigen bundle git
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
@@ -112,6 +112,8 @@ export PATH=$PATH:$YARN_PATH:$COMPOSER_PATH:$FLUTTER_PATH
 
 DEFAULT_USER=$USER
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+if [ -d "$HOME/.nvm" ]; then
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+fi
