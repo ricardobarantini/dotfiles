@@ -28,8 +28,8 @@ cd "$DOTFILES_FOLDER" || exit
 
 # Copying shell files
 for file in $(ls -a "$DOTFILES_FOLDER/shell" | tail -n +3); do
-  [ -e "$HOME/$file" ] && continue
-  cp $file $HOME
+  # [ -e "$HOME/$file" ] && continue
+  cp "shell/$file" $HOME
 done
 
 # Reloads .zshrc file
