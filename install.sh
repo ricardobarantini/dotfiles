@@ -28,3 +28,6 @@ cp $DOTFILES_FOLDER/shell/.profile $HOME_DIR
 cp $DOTFILES_FOLDER/shell/.zshrc $HOME_DIR
 cp $DOTFILES_FOLDER/shell/.hyper.js $HOME_DIR
 cp $DOTFILES_FOLDER/shell/.aliases $HOME_DIR
+
+# Reloads file
+source $HOME/.zshrc
