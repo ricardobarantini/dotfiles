@@ -2,6 +2,7 @@
 source ~/.antigen.zsh
 antigen bundle git
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
 antigen apply
 
 # If you come from bash you might have to change your $PATH.
