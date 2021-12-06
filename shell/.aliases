@@ -3,4 +3,4 @@
 alias p="cd $HOME/Projects"
 alias dl="cd $HOME/Downloads"
 alias m="cd $HOME/MEGA"
-
+alias sail="./vendor/bin/sail"
