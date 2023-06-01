@@ -26,6 +26,11 @@ fi
 
 cd "$DOTFILES_FOLDER" || exit
 
+# Installing Spaceship Theme (oh-my-zsh)
+git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
+
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+
 # Copying shell files
 for file in $(ls -a "$DOTFILES_FOLDER/shell" | tail -n +3); do
   # [ -e "$HOME/$file" ] && continue

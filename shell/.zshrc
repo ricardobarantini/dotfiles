@@ -9,7 +9,7 @@ antigen apply
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/ricardo/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -105,13 +105,22 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
 source $HOME/.functions
 
-export COMPOSER_PATH=$HOME/.config/composer/vendor/bin
-export YARN_PATH=$HOME/.yarn/bin
-export FLUTTER_PATH=/usr/local/bin/flutter/bin
-
-export PATH=$PATH:$YARN_PATH:$COMPOSER_PATH:$FLUTTER_PATH
-
 DEFAULT_USER=$USER
+
+if [ -d "$HOME/.config/composer/vendor/bin" ]; then
+    export COMPOSER_PATH=$HOME/.config/composer/vendor/bin
+    export PATH=$PATH:$COMPOSER_PATH
+fi
+
+if [ -d "$HOME/.yarn/bin" ]; then
+    export YARN_PATH=$HOME/.yarn/bin
+    export PATH=$PATH:$YARN_PATH
+fi
+
+if [ -d "/usr/local/bin/flutter/bin" ]; then
+    export FLUTTER_PATH=/usr/local/bin/flutter/bin
+    export PATH=$PATH:$FLUTTER_PATH
+fi
 
 if [ -d "$HOME/.nvm" ]; then
     export NVM_DIR="$HOME/.nvm"
