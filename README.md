@@ -8,6 +8,11 @@ Repositório contendo meus dotfiles personalizados.
 - oh-my-zsh
 - antigen
 
+## Opcionais
+
+- Hyper
+- Fonte Fira Code
+
 ## Configurações disponíveis
 
 - Oh My Zsh
