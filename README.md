@@ -2,22 +2,22 @@
 
 Repositório contendo meus dotfiles personalizados.
 
-## O que contém?
+## Requisitos
 
+- zsh
+- oh-my-zsh
+- antigen
+
+## Configurações disponíveis
+
+- Oh My Zsh
 - Antigen
 - Hyper Terminal com tela Dracula
-- Oh My Zsh
 - Tema Spaceship para Oh My Zsh
 
 ## Como instalar
 
-`git clone git@github.com:ricardobarantini/dotfiles.git`
-
-`cd dotfiles`
-
-`sudo chmod +x install.sh`
-
-`zsh ./install.sh`
+Copiar o conteúdo da pasta `shell` para o diretório `home`.
 
 ## Referências
 

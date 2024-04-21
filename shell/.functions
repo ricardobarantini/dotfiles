@@ -1,22 +1,17 @@
 #!/bin/bash
 
-#
 # Set Colors
-#
 
 bold=$(tput bold)
 underline=$(tput sgr 0 1)
 reset=$(tput sgr0)
-
 purple=$(tput setaf 171)
 red=$(tput setaf 1)
 green=$(tput setaf 76)
 tan=$(tput setaf 3)
 blue=$(tput setaf 38)
 
-#
-# Headers and  Logging
-#
+# Headers and Logging
 
 e_header () {
 	printf "\n${bold}${purple}==========  %s  ==========${reset}\n" "$@"
@@ -53,33 +48,4 @@ e_note () {
 # rm with force and recursive
 rr () {
 	rm -fr $1
-}
-
-docker-ssh() {
-    if [ -n "$1" ]
-    then
-        docker exec -it "$1" bash
-    fi
-}
-
-vpn () {
-  if [ -n "$1" -a "$1" = "c" ]; then
-    if [ -n "$2" ]; then
-      nordvpn c $2
-      return
-    fi
-
-    nordvpn c
-    return
-  fi
-
-  if [ -n "$1" -a "$1" = "d" ]; then
-    nordvpn d
-    return
-  fi
-
-  if [ ! -n "$1" -o "$1" = "s" -o "$1" = "status" ]; then
-    nordvpn status
-    return
-  fi
 }

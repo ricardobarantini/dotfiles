@@ -1,6 +1,24 @@
 #!/usr/bin/env bash
 
-alias p="cd $HOME/Projects"
-alias dl="cd $HOME/Downloads"
-alias m="cd $HOME/MEGA"
+# Laravel Sail
 alias sail="./vendor/bin/sail"
+alias sa="sail artisan"
+alias sb="sail bash"
+alias sd="sail down"
+alias st="sail artisan tinker"
+alias su="sail up -d"
+
+# Dev Environment
+alias api-dev="ssh -t ebtadmin@192.168.1.63 'cd /home/ebtadmin/workspace/ebtapi_v3; exec \$SHELL --login'"
+alias passport-dev="ssh -t ebtadmin@192.168.1.63 'cd /home/ebtadmin/workspace/ebt_passport_v3; exec \$SHELL --login'"
+
+# Forge (Production)
+alias api-prod="ssh -t forge@192.168.1.46 'cd /home/forge/apiv3.earthboundtrading.com; exec \$SHELL --login'"
+alias passport-prod="ssh -t forge@192.168.1.45 'cd /home/forge/ebtpassport.com; exec \$SHELL --login'"
+alias worker-prod="ssh -t forge@192.168.1.47 'cd /home/forge/workerv3.earthboundtrading.com; exec \$SHELL --login'"
+
+docker-ssh() {
+  if [ -n "$1" ]; then
+    docker exec -it "$1" bash
+  fi
+}

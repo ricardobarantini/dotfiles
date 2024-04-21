@@ -103,23 +103,12 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source $HOME/.aliases
-source $HOME/.functions
 
 DEFAULT_USER=$USER
 
 if [ -d "$HOME/.config/composer/vendor/bin" ]; then
     export COMPOSER_PATH=$HOME/.config/composer/vendor/bin
     export PATH=$PATH:$COMPOSER_PATH
-fi
-
-if [ -d "$HOME/.yarn/bin" ]; then
-    export YARN_PATH=$HOME/.yarn/bin
-    export PATH=$PATH:$YARN_PATH
-fi
-
-if [ -d "/usr/local/bin/flutter/bin" ]; then
-    export FLUTTER_PATH=/usr/local/bin/flutter/bin
-    export PATH=$PATH:$FLUTTER_PATH
 fi
 
 if [ -d "$HOME/.nvm" ]; then
