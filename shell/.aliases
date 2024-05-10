@@ -3,6 +3,8 @@
 # Laravel Sail
 alias sail="./vendor/bin/sail"
 alias sa="sail artisan"
+alias samf="sail artisan migrate:fresh"
+alias samfs="sail artisan migrate:fresh --seed"
 alias sb="sail bash"
 alias sd="sail down"
 alias st="sail artisan tinker"
