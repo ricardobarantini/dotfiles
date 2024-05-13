@@ -1,14 +1,19 @@
 #!/usr/bin/env bash
 
 # Laravel Sail
-alias sail="./vendor/bin/sail"
 alias sa="sail artisan"
+alias sacc="sail artisan config:clear"
+alias sadb="sail artisan db"
+alias sadw="sail artisan db:wipe"
+alias sail="./vendor/bin/sail"
+alias sam="sail artisan migrate"
 alias samf="sail artisan migrate:fresh"
 alias samfs="sail artisan migrate:fresh --seed"
+alias sarl="sail artisan route:list"
 alias sb="sail bash"
 alias sd="sail down"
 alias st="sail artisan tinker"
-alias su="sail up -d"
+alias sud="sail up -d"
 
 # Dev Environment
 alias api-dev="ssh -t ebtadmin@192.168.1.63 'cd /home/ebtadmin/workspace/ebtapi_v3; exec \$SHELL --login'"
