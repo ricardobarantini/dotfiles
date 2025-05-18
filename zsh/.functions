@@ -49,3 +49,11 @@ e_note () {
 rr () {
 	rm -fr $1
 }
+
+warp () {
+	if warp-cli status | grep 'Disconnected' > /dev/null 2>&1; then
+		warp-cli connect > /dev/null 2>&1
+	else
+		warp-cli disconnect > /dev/null 2>&1
+	fi
+}

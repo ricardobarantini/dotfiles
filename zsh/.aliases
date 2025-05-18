@@ -24,6 +24,13 @@ alias passport-dev="ssh -t ebtadmin@192.168.1.63 'cd /home/ebtadmin/workspace/eb
 alias api-prod="ssh -t forge@192.168.1.46 'cd /home/forge/apiv3.earthboundtrading.com; exec \$SHELL --login'"
 alias passport-prod="ssh -t forge@192.168.1.45 'cd /home/forge/ebtpassport.com; exec \$SHELL --login'"
 alias worker-prod="ssh -t forge@192.168.1.47 'cd /home/forge/workerv3.earthboundtrading.com; exec \$SHELL --login'"
+alias promotions-worker="ssh -t forge@137.184.202.205 'cd /home/forge/promoworker.earthboundtrading.com; exec \$SHELL --login'"
+alias promotions-db="ssh -t forge@147.182.188.160"
+
+alias docker-compose="docker compose"
+
+alias wc="warp-cli connect"
+alias wd="warp-cli disconnect"
 
 docker-ssh() {
   if [ -n "$1" ]; then
