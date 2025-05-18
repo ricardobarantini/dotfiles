@@ -1,33 +1,4 @@
 # Dotfiles
 
-Repositório contendo meus dotfiles personalizados.
+My dotfiles using stow.
 
-## Requisitos
-
-- zsh
-- oh-my-zsh
-- antigen
-
-## Opcionais
-
-- Hyper
-- Fonte Fira Code
-
-## Configurações disponíveis
-
-- Oh My Zsh
-- Antigen
-- Hyper Terminal com tela Dracula
-- Tema Spaceship para Oh My Zsh
-
-## Como instalar
-
-Copiar o conteúdo da pasta `shell` para o diretório `home`.
-
-## Referências
-
-- [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
-- [Spaceship](https://github.com/denysdovhan/spaceship-prompt)
-- [Hyper](https://github.com/zeit/hyper)
-- [Dracula](https://draculatheme.com/hyper/)
-- [Antigen](https://github.com/zsh-users/antigen)
