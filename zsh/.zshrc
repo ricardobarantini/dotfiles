@@ -1,10 +1,11 @@
-# antigen
-source ~/.antigen.zsh
-antigen bundle git
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-autosuggestions
-antigen apply
-
+# Antigen
+if [ -f $HOME/.antigen.zsh ]; then
+  source $HOME/.antigen.zsh
+  antigen bundle git
+  antigen bundle zsh-users/zsh-syntax-highlighting
+  antigen bundle zsh-users/zsh-autosuggestions
+  antigen apply
+fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -103,10 +104,15 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source $HOME/.aliases
-source $HOME/.functions
-
 DEFAULT_USER=$USER
+
+if [ -f $HOME/.aliases ]; then
+  source $HOME/.aliases
+fi
+
+if [ -f $HOME/.ssh_functions ]; then
+    source $HOME/.ssh_functions
+fi
 
 if [ -d "$HOME/.config/composer/vendor/bin" ]; then
     export COMPOSER_PATH=$HOME/.config/composer/vendor/bin
@@ -119,9 +125,4 @@ if [ -d "$HOME/.nvm" ]; then
     [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 fi
 
-if [ -f $HOME/.ssh_functions ]; then
-    source $HOME/.ssh_functions
-fi
-
 eval "$(starship init zsh)"
-

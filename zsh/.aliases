@@ -27,13 +27,19 @@ alias worker-prod="ssh -t forge@192.168.1.47 'cd /home/forge/workerv3.earthbound
 alias promotions-worker="ssh -t forge@137.184.202.205 'cd /home/forge/promoworker.earthboundtrading.com; exec \$SHELL --login'"
 alias promotions-db="ssh -t forge@147.182.188.160"
 
+# Older Tinkerwell runs the old "docker-compose" command instead of "docker compose"
 alias docker-compose="docker compose"
-
-alias wc="warp-cli connect"
-alias wd="warp-cli disconnect"
 
 docker-ssh() {
   if [ -n "$1" ]; then
     docker exec -it "$1" bash
   fi
+}
+
+warp () {
+	if warp-cli status | grep 'Disconnected' > /dev/null 2>&1; then
+		warp-cli connect > /dev/null 2>&1
+	else
+		warp-cli disconnect > /dev/null 2>&1
+	fi
 }
