@@ -1,7 +1,12 @@
 # Antigen
+if [ ! -f $HOME/.antigen.zsh ]; then
+  curl -L git.io/antigen > .antigen.zsh
+fi
+
 if [ -f $HOME/.antigen.zsh ]; then
   source $HOME/.antigen.zsh
   antigen bundle git
+  antigen bundle zsh-users/zsh-completions
   antigen bundle zsh-users/zsh-syntax-highlighting
   antigen bundle zsh-users/zsh-autosuggestions
   antigen apply
@@ -124,5 +129,7 @@ if [ -d "$HOME/.nvm" ]; then
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
     [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 fi
+
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
 eval "$(starship init zsh)"

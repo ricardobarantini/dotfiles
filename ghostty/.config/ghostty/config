@@ -1,3 +1,2 @@
-command = zellij
 font-family = FiraCode Nerd Font Mono
-theme = nord
+theme = catppuccin-frappe.conf
