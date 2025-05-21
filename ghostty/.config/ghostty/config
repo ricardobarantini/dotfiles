@@ -1,2 +1,3 @@
+command=tmux
 font-family = FiraCode Nerd Font Mono
 theme = catppuccin-frappe.conf
