@@ -88,11 +88,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -116,18 +116,18 @@ if [ -f $HOME/.aliases ]; then
 fi
 
 if [ -f $HOME/.ssh_functions ]; then
-    source $HOME/.ssh_functions
+  source $HOME/.ssh_functions
 fi
 
 if [ -d "$HOME/.config/composer/vendor/bin" ]; then
-    export COMPOSER_PATH=$HOME/.config/composer/vendor/bin
-    export PATH=$PATH:$COMPOSER_PATH
+  export COMPOSER_PATH=$HOME/.config/composer/vendor/bin
+  export PATH=$PATH:$COMPOSER_PATH
 fi
 
 if [ -d "$HOME/.nvm" ]; then
-    export NVM_DIR="$HOME/.nvm"
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 fi
 
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
