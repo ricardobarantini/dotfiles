@@ -1,4 +1,5 @@
-command = zellij
+auto-update = check
 desktop-notifications = false
-font-family = FiraCode Nerd Font Mono
+font-family = JetBrainsMono Nerd Font
 theme = catppuccin-frappe.conf
+gtk-adwaita = false

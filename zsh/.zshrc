@@ -76,7 +76,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git github sudo wd)
+plugins=(git github)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -131,5 +131,9 @@ if [ -d "$HOME/.nvm" ]; then
 fi
 
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+export PATH=$PATH:/usr/local/go/bin
+
+export CODE="$HOME/Code"
+export DOTFILES="$CODE/ricardobarantini/dotfiles"
 
 eval "$(starship init zsh)"
