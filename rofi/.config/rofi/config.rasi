@@ -180,4 +180,5 @@ configuration {
 */
 }
 
-@theme "./themes/custom.rasi"
+@theme "./catppuccin-default.rasi"
+// @theme "./themes/custom.rasi"
