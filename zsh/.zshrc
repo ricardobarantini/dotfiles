@@ -124,16 +124,24 @@ if [ -d "$HOME/.config/composer/vendor/bin" ]; then
   export PATH=$PATH:$COMPOSER_PATH
 fi
 
-if [ -d "$HOME/.nvm" ]; then
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-fi
+# if [ -d "$HOME/.nvm" ]; then
+#   export NVM_DIR="$HOME/.nvm"
+#   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# fi
+
+source /usr/share/nvm/init-nvm.sh
 
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 export PATH=$PATH:/usr/local/go/bin
 
 export CODE="$HOME/Code"
 export DOTFILES="$CODE/ricardobarantini/dotfiles"
+
+export PHPENV_ROOT="/home/ricardo/.phpenv"
+if [ -d "${PHPENV_ROOT}" ]; then
+  export PATH="${PHPENV_ROOT}/bin:${PATH}"
+  eval "$(phpenv init -)"
+fi
 
 eval "$(starship init zsh)"
