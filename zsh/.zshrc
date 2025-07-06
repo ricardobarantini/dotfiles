@@ -130,7 +130,7 @@ fi
 #   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # fi
 
-source /usr/share/nvm/init-nvm.sh
+# source /usr/share/nvm/init-nvm.sh
 
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 export PATH=$PATH:/usr/local/go/bin
