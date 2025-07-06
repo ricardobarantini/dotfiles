@@ -4,13 +4,12 @@
     "reload_style_on_change": true,
     "modules-left": [
         "custom/launcher",
-        "hyprland/window"
-    ],
-    "modules-center": [
         "hyprland/workspaces"
     ],
+    "modules-center": [
+        "group/hardware"
+    ],
     "modules-right": [
-        "group/hardware",
         "tray",
         "wireplumber",
         "clock",
@@ -44,7 +43,8 @@
         "modules": [
             "cpu",
             "memory",
-            "disk"
+            "disk",
+            "network"
         ]
     },
     "cpu": {
@@ -52,12 +52,19 @@
         "on-click": "alacritty -e htop"
     },
     "memory": {
-        "format": " {used:0.2f}G/{total:0.2f}G"
+        "format": " {used:0.2f}G/{total:0.2f}G"
     },
     "disk": {
         "format": " {specific_used:0.0f}GB/{specific_total:0.0f}GB",
         "unit": "GB",
-        "on-click": "nautilus"
+        "on-click": "alacritty -e ncdu --color dark /",
+        "on-click-middle": "nautilus"
+    },
+    "network": {
+        "format-ethernet": "󰈀 {ifname}",
+        "format-disconnect": "",
+        "tooltip-format-ethernet": "󰛴 {bandwidthDownBytes}  󰛶 {bandwidthUpBytes}",
+        "on-click": "alacritty --title nmtui -e nmtui"
     },
     "tray": {
         "icon-size": 18,
@@ -70,6 +77,8 @@
         "on-click-middle": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
     },
     "clock": {
+        "format": "{:%d %b %H:%M}",
+        "format-alt": "{:%d %B %H:%M}",
         "timezone": "America/Sao_Paulo",
         "tooltip": false
     },

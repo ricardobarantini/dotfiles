@@ -1,7 +1,9 @@
 @define-color primary rgba(105, 51, 174, 0.9);
 @define-color secondary #16FBDC;
 @define-color accent #F1D800;
+@define-color accent-shade-1 #DBC500;
 @define-color text-color #F8F8FF;
+@define-color black #313131;
 
 * {
   font-family: 'JetBrainsMono Nerd Font';
@@ -13,8 +15,9 @@
   margin-top: 10px;
 }
 
+.modules-left,
+.modules-center,
 .modules-right {
-  border-radius: 5px;
   padding: 8px 15px;
 }
 
@@ -33,38 +36,58 @@
 }
 
 #cpu {
-  padding: 5px 10px;
   border-radius: 10px 0 0 10px;
 }
 
-#memory {
-  padding: 0 10px;
+#memory {}
+
+#disk {}
+
+#network {
+  border-radius: 0 10px 10px 0;
 }
 
-#disk {
+#cpu, #memory, #disk, #network {
   padding: 0 10px;
-  border-radius: 0 10px 10px 0;
 }
 
 #tray {
   margin-left: 10px;
 }
 
-#wireplumber {
-  padding: 0 10px;
-  margin-left: 10px;
-  border-radius: 10px;
+#tray menu {
+  background: @primary;
 }
 
+#wireplumber {}
+
+#network {}
+
+#clock {}
+
+#cpu,
+#memory,
+#disk,
+#wireplumber,
+#network,
 #clock {
-  padding: 0 10px;
-  border-radius: 10px;
-  margin-left: 10px;
+  background: @accent;
+  color: @black;
 }
 
-#cpu, #memory, #disk, #wireplumber, #clock {
-  background: @accent;
-  color: #313131;
+#wireplumber, #clock {
+  padding: 0 10px;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+
+#cpu:hover,
+#memory:hover,
+#disk:hover,
+#network:hover,
+#wireplumber:hover,
+#clock:hover {
+  background: @accent-shade-1;
 }
 
 #custom-lock, #custom-reboot, #custom-power {
