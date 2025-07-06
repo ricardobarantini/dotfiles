@@ -39,10 +39,6 @@
   border-radius: 10px 0 0 10px;
 }
 
-#memory {}
-
-#disk {}
-
 #network {
   border-radius: 0 10px 10px 0;
 }
@@ -92,4 +88,42 @@
 
 #custom-lock, #custom-reboot, #custom-power {
   margin: 0 15px;
+}
+
+#custom-packages {
+  color: @black;
+  background: @accent;
+}
+
+#custom-packages:active {
+  border-radius: 10px 0 0 10px;
+}
+
+#custom-docker {
+  background: #0db7ed;
+}
+
+#custom-php {
+  background: #4f5b93;
+}
+
+#custom-node {
+  background: #215732;
+}
+
+#custom-packages,
+#custom-docker,
+#custom-php,
+#custom-node {
+  padding: 0 10px;
+}
+
+/* #custom-docker,
+#custom-php,
+#custom-node {
+  color: @text-color;
+} */
+
+#packages {
+  color: red;
 }

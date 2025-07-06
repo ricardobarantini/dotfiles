@@ -10,6 +10,7 @@
         "group/hardware"
     ],
     "modules-right": [
+        // "group/packages",
         "tray",
         "wireplumber",
         "clock",
@@ -48,23 +49,68 @@
         ]
     },
     "cpu": {
+        "interval": 10,
         "format": " {usage}%",
         "on-click": "alacritty -e htop"
     },
     "memory": {
+        "interval": 10,
         "format": " {used:0.2f}G/{total:0.2f}G"
     },
     "disk": {
+        "interval": 10,
         "format": " {specific_used:0.0f}GB/{specific_total:0.0f}GB",
         "unit": "GB",
         "on-click": "alacritty -e ncdu --color dark /",
         "on-click-middle": "nautilus"
     },
     "network": {
+        "interval": 10,
         "format-ethernet": "󰈀 {ifname}",
         "format-disconnect": "",
         "tooltip-format-ethernet": "󰛴 {bandwidthDownBytes}  󰛶 {bandwidthUpBytes}",
         "on-click": "alacritty --title nmtui -e nmtui"
+    },
+    "custom/packages": {
+        "format": "",
+        "tooltip-format": "Package versions"
+    },
+    "custom/docker": {
+        "exec": "~/.config/waybar/scripts/docker-version.sh",
+        "format": "{icon} {text}",
+        "format-icons": {
+            "default": ""
+        },
+        "tooltip-format": "Open lazydocker",
+        "on-click": "alacritty -e lazydocker"
+    },
+    "custom/php": {
+        "exec": "~/.config/waybar/scripts/php-version.sh",
+        "format": "{icon} {text}",
+        "format-icons": {
+            "default": ""
+        },
+        "tooltip-format": "PHP version"
+    },
+    "custom/node": {
+        "exec": "~/.config/waybar/scripts/node-version.sh",
+        "format": "{icon} {text}",
+        "format-icons": {
+            "default": ""
+        },
+        "tooltip-format": "Node.js version"
+    },
+    "group/packages": {
+        "orientation": "horizontal",
+        "drawer": {
+            "click-to-reveal": false
+        },
+        "modules": [
+            "custom/packages",
+            "custom/docker",
+            "custom/php",
+            "custom/node"
+        ]
     },
     "tray": {
         "icon-size": 18,
@@ -73,8 +119,8 @@
     "wireplumber": {
         "format": "{icon} {volume}%",
         "format-icons": ["󰝟", "", "", ""],
-        "on-click": "pavucontrol",
-        "on-click-middle": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+        "format-muted": "󰝟 0%",
+        "on-click": "pavucontrol"
     },
     "clock": {
         "format": "{:%d %b %H:%M}",
