@@ -4,6 +4,6 @@ My personal dotfiles. This should be private.
 
 ## Installation
 
-`sudo chmod +x install.sh`
-
-`bash ./install.sh`
+```bash
+eval "$(wget -qO- https://raw.githubusercontent.com/ricardobarantini/dotfiles/refs/heads/main/boot.sh)"
+```
