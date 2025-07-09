@@ -10,3 +10,5 @@
 	defaultBranch = main
 [gpg]
 	format = ssh
+[core]
+	fileMode = false
