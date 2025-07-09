@@ -1,12 +1,14 @@
 #!/bin/bash
 
+dotfiles=~/.local/share/dotfiles
+
 # Bash
-ln -sf $(pwd)/bash/.bashrc ~
-ln -sf $(pwd)/bash/.profile ~
+ln -sf $dotfiles/bash/.bashrc ~/.
+ln -sf $dotfiles/bash/.profile ~/.
 
 # Git
-ln -sf $(pwd)/git/.gitconfig ~
+ln -sf $dotfiles/git/.gitconfig ~/.
 
 # Zsh
-ln -sf $(pwd)/zsh/.aliases ~
-ln -sf $(pwd)/zsh/.exports ~
+ln -sf $dotfiles/zsh/.aliases ~/.
+ln -sf $dotfiles/zsh/.exports ~/.
