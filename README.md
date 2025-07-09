@@ -2,6 +2,8 @@
 
 My personal dotfiles. This should be private.
 
+![.dotfiles banner](dotfiles.png)
+
 ## Installation
 
 ```bash
