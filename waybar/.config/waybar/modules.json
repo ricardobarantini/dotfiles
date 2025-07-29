@@ -1,0 +1,94 @@
+{
+  "custom/launcher": {
+    "format": "",
+    "on-click": "rofi -show",
+    "tooltip": false
+  },
+  "group/quicklinks": {
+    "orientation": "horizontal",
+    "modules": [
+        "custom/filemanager",
+        "custom/browser",
+        "custom/terminal"
+    ]
+  },
+  "custom/filemanager": {
+    "format": "",
+    "on-click": "nautilus",
+    "tooltip": false
+  },
+  "custom/browser": {
+    "format": "",
+    "on-click": "librewolf",
+    "tooltip": false
+  },
+  "custom/terminal": {
+    "format": "",
+    "on-click": "ghostty",
+    "tooltip": false
+  },
+  "hyprland/workspaces": {
+    "all-outputs": true,
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",
+      "default": ""
+    }
+  },
+  "group/hardware": {
+    "orientation": "horizontal",
+    "modules": [
+        "cpu",
+        "memory",
+        "disk"
+    ]
+  },
+  "cpu": {
+    "interval": 10,
+    "format": " {usage}%",
+    "on-click": "ghostty -e btop"
+  },
+  "memory": {
+    "interval": 10,
+    "format": " {percentage}%"
+  },
+  "disk": {
+    "interval": 10,
+    "format": " {percentage_used}%",
+    "on-click": "ghostty -e ncdu --color dark /",
+    "on-click-middle": "nautilus"
+  },
+  "wlr/taskbar": {
+    "all-outputs": true,
+    "on-click": "activate"
+  },
+  "group/system": {
+    "orientation": "horizontal",
+    "modules": [
+        "wireplumber",
+        "network"
+    ]
+  },
+  "wireplumber": {
+    "format": "{icon} {volume}%",
+    "format-icons": [
+      "󰝟",
+      "",
+      "",
+      ""
+    ],
+    "format-muted": "󰝟",
+    "on-click": "pavucontrol",
+    "on-click-middle": "wpctl set-mute @DEFAULT_SINK@ toggle"
+  },
+  "network": {
+    "format-ethernet": "󰈀",
+    "on-click": "nm-connection-editor"
+  },
+  "clock": {
+    "format": "{:%a %d %b %H:%M}",
+    "format-alt": "{:%A %d %B %H:%M}",
+    "timezone": "America/Sao_Paulo",
+    "tooltip": false
+  }
+}

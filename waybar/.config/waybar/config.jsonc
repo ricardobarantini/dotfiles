@@ -1,0 +1,18 @@
+{
+  "layer": "top",
+  "reload_style_on_change": true,
+
+  "include": ["~/.config/waybar/modules.json"],
+
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "group/hardware"
+  ],
+  "modules-right": [
+    "tray",
+    "group/system",
+    "clock"
+  ]
+}

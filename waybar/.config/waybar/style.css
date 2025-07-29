@@ -1,0 +1,37 @@
+/* @import "../soshoku/current/theme/waybar.css"; */
+
+@define-color primary rgba(48, 52, 70, 0.9);
+@define-color secondary rgba(98, 104, 128, 0.9);
+@define-color text-color rgb(198, 208, 245);
+
+* {
+  font-family: 'Ubuntu Nerd Font';
+  font-size: 14px;
+  font-weight: bold;
+}
+
+window#waybar {
+  background: @primary;
+  color: @text-color;
+}
+
+#workspaces button {
+  background: transparent;
+  color: @text-color;
+  padding: 3px;
+}
+
+#workspaces button:hover {
+  background: transparent;
+  box-shadow: none;
+  border-color: transparent;
+  text-shadow: none;
+}
+
+#hardware *, #tray *, #system * {
+  margin: 0 3px;
+}
+
+#workspaces, #tray, #system, #clock {
+  margin: 0 5px;
+}
