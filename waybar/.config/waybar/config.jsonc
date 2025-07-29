@@ -13,6 +13,7 @@
   "modules-right": [
     "tray",
     "group/system",
-    "clock"
+    "clock",
+    "custom/power"
   ]
 }

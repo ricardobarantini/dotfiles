@@ -90,5 +90,9 @@
     "format-alt": "{:%A %d %B %H:%M}",
     "timezone": "America/Sao_Paulo",
     "tooltip": false
+  },
+  "custom/power": {
+    "format": "",
+    "on-click": "walker -m power"
   }
 }

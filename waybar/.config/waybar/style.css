@@ -32,6 +32,6 @@ window#waybar {
   margin: 0 3px;
 }
 
-#workspaces, #tray, #system, #clock {
+#workspaces, #tray, #system, #clock, #custom-power {
   margin: 0 5px;
 }
