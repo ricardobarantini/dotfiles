@@ -80,7 +80,7 @@ history = true
 icon = "applications-other"
 
 [builtins.applications.actions]
-enabled = true
+enabled = false
 hide_category = false
 hide_without_query = true
 
