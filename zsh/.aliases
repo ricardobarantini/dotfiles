@@ -38,12 +38,10 @@ docker-ssh() {
   fi
 }
 
-warp () {
-	if warp-cli status | grep 'Disconnected' > /dev/null 2>&1; then
-		warp-cli connect > /dev/null 2>&1
-    notify-send -i "network-wireless" "WARP" "You're connected now"
-	else
-		warp-cli disconnect > /dev/null 2>&1
-    notify-send -i "network-wireless" "WARP" "You're disconnected now"
-	fi
+clone() {
+  git clone git@github.com:"$1".git
+}
+
+copy() {
+  xclip -selection c <"$1"
 }
