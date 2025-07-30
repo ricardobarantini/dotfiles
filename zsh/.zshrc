@@ -1,39 +1,29 @@
-# Antigen
-if [ ! -f $HOME/.antigen.zsh ]; then
-  curl -L git.io/antigen > .antigen.zsh
+# Antidote
+source $HOME/.antidote/antidote.zsh
+antidote load
+
+# Exports
+export PHPENV_ROOT="/home/ricardo/.phpenv"
+if [ -d "${PHPENV_ROOT}" ]; then
+  export PATH="${PHPENV_ROOT}/bin:${PATH}"
+  eval "$(phpenv init -)"
 fi
 
-if [ -f $HOME/.antigen.zsh ]; then
-  source $HOME/.antigen.zsh
-  antigen bundle git
-  antigen bundle zsh-users/zsh-completions
-  antigen bundle zsh-users/zsh-syntax-highlighting
-  antigen bundle zsh-users/zsh-autosuggestions
-  antigen apply
-fi
+# Aliases
+alias ls='eza -lh --group-directories-first --icons=auto'
+alias lsa='ls -a'
+alias lt='eza --tree --level=2 --long --icons --git'
+alias lta='lt -a'
+alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
+alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S"
+alias sail="./vendor/bin/sail"
+alias docker-compose="docker compose"
 
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+# Functions
+clone() {
+  git clone git@github.com:"$1".git
+}
 
-plugins=(git github)
-
-source $ZSH/oh-my-zsh.sh
-
-# User configuration
-if [ -f $HOME/.exports ]; then
-  source $HOME/.exports
-fi
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='nvim'
-fi
-
-DEFAULT_USER=$USER
-
-eval "$(starship init zsh)"
+copy() {
+  xclip -selection c <"$1"
+}
