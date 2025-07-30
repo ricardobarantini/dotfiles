@@ -83,10 +83,11 @@
   },
   "network": {
     "format-ethernet": "󰈀",
-    "on-click": "nm-connection-editor"
+    "on-click": "nm-connection-editor",
+    "tooltip": false
   },
   "clock": {
-    "format": "{:%a %d %b %H:%M}",
+    "format": "{:%d %H:%M}",
     "format-alt": "{:%A %d %B %H:%M}",
     "timezone": "America/Sao_Paulo",
     "tooltip": false

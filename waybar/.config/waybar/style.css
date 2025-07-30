@@ -7,7 +7,6 @@
 * {
   font-family: 'Ubuntu Nerd Font';
   font-size: 14px;
-  font-weight: bold;
 }
 
 window#waybar {
@@ -28,7 +27,11 @@ window#waybar {
   text-shadow: none;
 }
 
-#hardware *, #tray *, #system * {
+#hardware * {
+  margin: 0 6px;
+}
+
+#tray *, #system * {
   margin: 0 3px;
 }
 
