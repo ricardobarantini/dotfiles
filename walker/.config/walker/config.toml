@@ -2,7 +2,7 @@ app_launch_prefix = ""
 terminal_title_flag = ""
 locale = ""
 close_when_open = true
-theme = "default"
+theme = "frappe"
 monitor = ""
 hotreload_theme = true
 as_window = false
@@ -73,7 +73,7 @@ prioritize_new = true
 hide_actions_with_empty_query = true
 context_aware = true
 refresh = true
-show_sub_when_single = true
+show_sub_when_single = false
 show_icon_when_single = true
 show_generic = true
 history = true
@@ -274,7 +274,11 @@ switcher_only = true
 exec = "shutdown now"
 icon = "system-shutdown"
 label = "Shutdown"
-match_fields = "s"
+
+[[plugins.entries]]
+exec = "systemctl suspend"
+icon = "system-suspend"
+label = "Suspend"
 
 [[plugins.entries]]
 exec = "reboot"
