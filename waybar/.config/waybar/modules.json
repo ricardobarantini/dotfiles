@@ -93,6 +93,6 @@
   },
   "custom/power": {
     "format": "",
-    "on-click": "walker -m power"
+    "on-click": "wlogout"
   }
 }
