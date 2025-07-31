@@ -1,7 +1,5 @@
-[user]
-	email = ricardobarantini@gmail.com
-	name = Ricardo Barantini
-	signingkey = /home/ricardo/.ssh/id_ed25519.pub
+[include]
+	path = ~/.gitconfig-user
 [alias]
 	cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop\\|staging\\|main' | xargs -n 1 -r git branch -d"
 	wip = "commit --message 'wip' --no-verify"
@@ -12,3 +10,5 @@
 	format = ssh
 [core]
 	fileMode = false
+[fetch]
+	prune = true
