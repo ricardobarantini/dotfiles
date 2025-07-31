@@ -65,8 +65,7 @@
   "group/system": {
     "orientation": "horizontal",
     "modules": [
-        "wireplumber",
-        "network"
+        "wireplumber"
     ]
   },
   "wireplumber": {
