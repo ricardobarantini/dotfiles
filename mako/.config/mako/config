@@ -1,0 +1,16 @@
+background-color=#303446
+text-color=#c6d0f5
+border-color=#ca9ee6
+progress-color=over #414559
+width=420
+height=110
+padding=10
+border-size=2
+font=Ubuntu Nerd Font 12
+anchor=top-right
+outer-margin=20
+default-timeout=5000
+max-icon-size=32
+
+[urgency=high]
+border-color=#e78284
