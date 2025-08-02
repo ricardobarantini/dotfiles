@@ -78,6 +78,8 @@
     ],
     "format-muted": "󰝟",
     "on-click": "pavucontrol",
+    "on-scroll-up": "~/.config/hypr/scripts/wireplumber-volume-up.sh",
+    "on-scroll-down": "~/.config/hypr/scripts/wireplumber-volume-down.sh",
     "on-click-middle": "wpctl set-mute @DEFAULT_SINK@ toggle"
   },
   "network": {
