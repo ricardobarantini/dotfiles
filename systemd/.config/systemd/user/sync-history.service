@@ -1,0 +1,6 @@
+[Unit]
+Description=Sync .zsh_history to Dropbox
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/bash ~/.config/systemd/user/sync-history.sh
