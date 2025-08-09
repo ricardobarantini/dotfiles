@@ -20,10 +20,18 @@ alias sail="./vendor/bin/sail"
 alias docker-compose="docker compose"
 
 # Functions
-clone() {
+function clone() {
   git clone git@github.com:"$1".git
 }
 
-copy() {
+function copy() {
   xclip -selection c <"$1"
+}
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
 }
