@@ -2,6 +2,8 @@
 #  exec Hyprland
 #fi
 
-if uwsm check may-start && uwsm select; then
-  exec uwsm start hyprland-uwsm.desktop
+if [ -z "$TMUX" ] && [ -z "$DISPLAY" ] && [ -z "$WAYLAND_DISPLAY" ]; then
+  if uwsm check may-start && uwsm select; then
+    exec uwsm start hyprland-uwsm.desktop
+  fi
 fi
