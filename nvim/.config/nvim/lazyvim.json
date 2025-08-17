@@ -2,6 +2,7 @@
   "extras": [
     "lazyvim.plugins.extras.editor.neo-tree",
     "lazyvim.plugins.extras.lang.php",
+    "lazyvim.plugins.extras.lang.svelte",
     "lazyvim.plugins.extras.lang.vue"
   ],
   "install_version": 8,

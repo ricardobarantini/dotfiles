@@ -5,7 +5,7 @@ return {
   lazy = false,
   opts = {
     flavour = "frappe",
-    transparent_background = true,
+    transparent_background = false,
     integrations = {
       cmp = true,
       gitsigns = true,
