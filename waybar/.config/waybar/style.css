@@ -28,11 +28,11 @@ window#waybar {
 }
 
 #hardware * {
-  margin: 0 6px;
+  margin: 0 5px;
 }
 
 #tray *, #system * {
-  margin: 0 3px;
+  margin: 0 5px;
 }
 
 #workspaces, #tray, #system, #clock, #custom-power {
