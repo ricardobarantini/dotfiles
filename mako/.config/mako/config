@@ -23,6 +23,9 @@ anchor=top-center
 group-by=app-name
 # Hide the group-index
 format=<b>%s</b>\n%b
+background-color=#303446cc
+border-size=0
+border-radius=10
 
 [app-name=volume group-index=0]
 # Only show last notification
