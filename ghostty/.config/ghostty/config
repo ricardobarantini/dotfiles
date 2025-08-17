@@ -1,8 +1,8 @@
 auto-update = download
 desktop-notifications = false
 font-family = JetBrainsMono Nerd Font
-background-opacity = 0.9
 theme = catppuccin-frappe
 confirm-close-surface = false
+window-padding-x = 10
 
 keybind = global:ctrl+shift+g=text:lazygit\n
