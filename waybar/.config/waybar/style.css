@@ -3,6 +3,7 @@
 @define-color primary rgba(48, 52, 70, 0.9);
 @define-color secondary rgba(98, 104, 128, 0.9);
 @define-color text-color rgb(198, 208, 245);
+@define-color accent rgb(202, 158, 230);
 
 * {
   font-family: 'Ubuntu Nerd Font';
@@ -18,6 +19,11 @@ window#waybar {
   background: transparent;
   color: @text-color;
   padding: 3px;
+}
+
+#workspaces button.active {
+  color: @accent;
+  font-weight: bold;
 }
 
 #workspaces button:hover {
