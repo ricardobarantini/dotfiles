@@ -1,5 +1,17 @@
+ZDOTDIR="$HOME/.zsh"
+ZOXIDE_CMD_OVERRIDE="cd"
+
+# Bindkeys
+bindkey '^ ' autosuggest-accept
+
 # Antidote
-source $HOME/.antidote/antidote.zsh
+ANTIDOTE_HOME="$ZDOTDIR/.antidote"
+
+if [ ! -d "$ANTIDOTE_HOME" ]; then
+  git clone --depth=1 https://github.com/mattmc3/antidote.git $ANTIDOTE_HOME
+fi
+
+source $ANTIDOTE_HOME/antidote.zsh
 antidote load
 
 # Exports
