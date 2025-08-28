@@ -14,6 +14,12 @@ fi
 source $ANTIDOTE_HOME/antidote.zsh
 antidote load
 
+# History
+HISTDUP=erase
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_find_no_dups
+
 # Exports
 export PHPENV_ROOT="/home/ricardo/.phpenv"
 if [ -d "${PHPENV_ROOT}" ]; then
@@ -30,22 +36,8 @@ alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
 alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S"
 alias sail="./vendor/bin/sail"
 alias docker-compose="docker compose"
-alias pacman="sudo pacman"
-alias pacman-update="sudo pacman -Syu"
 
 # Functions
 function clone() {
   git clone git@github.com:"$1".git
-}
-
-function copy() {
-  xclip -selection c <"$1"
-}
-
-function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	IFS= read -r -d '' cwd < "$tmp"
-	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
-	rm -f -- "$tmp"
 }
