@@ -1,2 +1,8 @@
 #!/bin/bash
-playerctl -a pause && hyprlock
+
+if [[ $(playerctl status) = "Playing" ]]; then
+  playerctl -a pause
+fi
+
+hyprlock
+
