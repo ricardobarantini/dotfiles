@@ -27,6 +27,8 @@ if [ -d "${PHPENV_ROOT}" ]; then
   eval "$(phpenv init -)"
 fi
 
+PATH="$PATH:$HOME/.local/bin"
+
 # Aliases
 alias ls='eza -lh --group-directories-first --icons=auto'
 alias lsa='ls -a'
@@ -36,6 +38,7 @@ alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
 alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S"
 alias sail="./vendor/bin/sail"
 alias docker-compose="docker compose"
+alias pacman="sudo pacman"
 
 # Functions
 function clone() {
