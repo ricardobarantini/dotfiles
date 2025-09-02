@@ -1,14 +1,27 @@
 [include]
-	path = ~/.gitconfig-user
+  path = ~/.gitconfig-user
+
+[commit]
+  gpgSign = true
+  template = ~/.config/git/template
+
+[gpg]
+  format = ssh
+
 [alias]
 	cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop\\|staging\\|main' | xargs -n 1 -r git branch -d"
 	wip = "commit --message 'wip' --no-verify"
 	uncommit = 'reset --soft "HEAD~1"'
+
 [init]
 	defaultBranch = main
-[gpg]
-	format = ssh
+
 [core]
-	fileMode = false
+  fileMode = false
+	pager = diff-so-fancy | less --tabs=4 -RF
+
 [fetch]
-	prune = true
+  prune = true
+
+[interactive]
+  diffFilter = diff-so-fancy --patch
