@@ -17,6 +17,7 @@
 	defaultBranch = main
 
 [core]
+  editor = "vim"
   fileMode = false
 	pager = diff-so-fancy | less --tabs=4 -RF
 
