@@ -1,0 +1,56 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "ssh_connections": [
+    {
+      "host": "192.168.1.160",
+      "projects": [
+        {
+          "paths": ["/home/ebtadmin/workspace/ebt_passport_v3"]
+        },
+        {
+          "paths": ["/home/ebtadmin/workspace/ebtapi_v3"]
+        }
+      ],
+      "nickname": "Dev 1"
+    }
+  ],
+
+  "ui_font_family": "JetBrainsMonoNL Nerd Font",
+  "ui_font_size": 15,
+
+  "buffer_font_size": 15,
+
+  "terminal": {
+    "font_family": "JetBrainsMonoNL Nerd Font Mono",
+    "line_height": "standard"
+  },
+
+  "theme": {
+    "mode": "system",
+    "light": "Catppuccin Frappé",
+    "dark": "One Dark"
+  },
+
+  "icon_theme": "Catppuccin Frappé",
+
+  "languages": {
+    "PHP": {
+      "language_servers": ["phpcs"]
+    }
+  },
+
+  "lsp": {
+    "phpcs": {
+      "settings": {
+        "standard": "PSR12"
+      }
+    }
+  }
+}
