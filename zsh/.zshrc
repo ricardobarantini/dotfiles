@@ -27,7 +27,7 @@ if [ -d "${PHPENV_ROOT}" ]; then
   eval "$(phpenv init -)"
 fi
 
-PATH="$PATH:$HOME/.local/bin"
+PATH="$PATH:$HOME/.local/bin:$HOME/.config/composer/vendor/bin"
 
 # Aliases
 alias ls='eza -lh --group-directories-first --icons=auto'
