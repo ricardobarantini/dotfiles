@@ -15,6 +15,9 @@
           "paths": ["/home/ebtadmin/workspace/ebt_passport_v3"]
         },
         {
+          "paths": ["/home/ebtadmin/workspace/ebt_passport_versions/laravel-12"]
+        },
+        {
           "paths": ["/home/ebtadmin/workspace/ebtapi_v3"]
         }
       ],
@@ -33,16 +36,16 @@
   },
 
   "theme": {
-    "mode": "system",
-    "light": "Catppuccin Frappé",
-    "dark": "One Dark"
+    "mode": "dark",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Frappé"
   },
 
   "icon_theme": "Catppuccin Frappé",
 
   "languages": {
     "PHP": {
-      "language_servers": ["phpcs"]
+      "language_servers": ["intelephense", "phpcs", "phpactor"]
     }
   },
 
@@ -52,5 +55,29 @@
         "standard": "PSR12"
       }
     }
+  },
+
+  "project_panel": {
+    "default_width": 350
+  },
+
+  "outline_panel": {
+    "default_width": 350
+  },
+
+  "collaboration_panel": {
+    "default_width": 350
+  },
+
+  "git_panel": {
+    "default_width": 350
+  },
+
+  "notification_panel": {
+    "default_width": 350
+  },
+
+  "agent": {
+    "default_width": 350
   }
 }
