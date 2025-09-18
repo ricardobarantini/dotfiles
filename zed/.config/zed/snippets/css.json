@@ -1,0 +1,7 @@
+{
+  "@apply": {
+    "prefix": "@a",
+    "body": ["@apply ${1};", "$0"],
+    "description": "Tailwind @apply helper"
+  }
+}
