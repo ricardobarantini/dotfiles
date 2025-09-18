@@ -6,11 +6,7 @@
   },
   "group/quicklinks": {
     "orientation": "horizontal",
-    "modules": [
-        "custom/filemanager",
-        "custom/browser",
-        "custom/terminal"
-    ]
+    "modules": ["custom/filemanager", "custom/browser", "custom/terminal"]
   },
   "custom/filemanager": {
     "format": "",
@@ -30,10 +26,13 @@
   "hyprland/workspaces": {
     "all-outputs": false,
     "show-special": true,
-    "format": "{id}",
+    "format": "{icon}",
     "format-icons": {
       "active": "",
-      "default": ""
+      "default": "",
+      "empty": "",
+      "special": "",
+      "urgent": ""
     },
     "persistent-workspaces": {
       "*": [1, 2, 3, 4, 5]
@@ -41,11 +40,7 @@
   },
   "group/hardware": {
     "orientation": "horizontal",
-    "modules": [
-        "cpu",
-        "memory",
-        "disk"
-    ]
+    "modules": ["cpu", "memory", "disk"]
   },
   "cpu": {
     "interval": 10,
@@ -68,18 +63,11 @@
   },
   "group/system": {
     "orientation": "horizontal",
-    "modules": [
-        "wireplumber"
-    ]
+    "modules": ["wireplumber"]
   },
   "wireplumber": {
     "format": "{icon} {volume}%",
-    "format-icons": [
-      "󰝟",
-      "",
-      "",
-      ""
-    ],
+    "format-icons": ["󰝟", "", "", ""],
     "format-muted": "󰝟",
     "on-click": "pavucontrol",
     "on-scroll-up": "~/.config/hypr/scripts/wireplumber-volume-up.sh",
@@ -99,6 +87,20 @@
   },
   "custom/power": {
     "format": "",
-    "on-click": "wlogout"
+    "tooltip": false,
+    "on-click": "~/.local/bin/menu system"
+  },
+  "custom/wf-recorder": {
+    "format": "󰑋 HDMI-A-1",
+    "tooltip": "false"
+  },
+  "group/calendar-clock": {
+    "orientation": "horizontal",
+    "modules": ["custom/calendar", "clock"]
+  },
+  "custom/calendar": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "gnome-calendar"
   }
 }

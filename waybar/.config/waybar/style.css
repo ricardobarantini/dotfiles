@@ -1,46 +1,106 @@
-/* @import "../soshoku/current/theme/waybar.css"; */
-
-@define-color primary rgba(48, 52, 70, 0.9);
-@define-color secondary rgba(98, 104, 128, 0.9);
-@define-color text-color rgb(198, 208, 245);
-@define-color accent rgb(202, 158, 230);
+/* Catppuccin Palette */
+@define-color rosewater rgb(242, 213, 207);
+@define-color flamingo rgb(238, 190, 190);
+@define-color pink rgb(244, 184, 228);
+@define-color mauve rgb(202, 158, 230);
+@define-color red rgb(231, 130, 132);
+@define-color maroon rgb(234, 153, 156);
+@define-color peach rgb(239, 159, 118);
+@define-color yellow rgb(229, 200, 144);
+@define-color green rgb(166, 209, 137);
+@define-color teal rgb(129, 200, 190);
+@define-color sky rgb(153, 209, 219);
+@define-color sapphire rgb(133, 193, 220);
+@define-color blue rgb(140, 170, 238);
+@define-color lavender rgb(186, 187, 241);
+@define-color text rgb(198, 208, 245);
+@define-color subtext1 rgb(181, 191, 226);
+@define-color subtext0 rgb(165, 173, 206);
+@define-color overlay2 rgb(148, 156, 187);
+@define-color overlay1 rgb(131, 139, 167);
+@define-color overlay0 rgb(115, 121, 148);
+@define-color surface2 rgb(98, 104, 128);
+@define-color surface1 rgb(81, 87, 109);
+@define-color surface0 rgb(65, 69, 89);
+@define-color base rgb(48, 52, 70);
+@define-color mantle rgb(41, 44, 60);
+@define-color crust rgb(35, 38, 52);
 
 * {
-  font-family: 'Ubuntu Nerd Font';
-  font-size: 14px;
+    font-family: "Ubuntu Nerd Font";
+    font-size: 14px;
 }
 
 window#waybar {
-  background: @primary;
-  color: @text-color;
+    background: transparent;
+    color: @base;
+}
+
+#workspaces {
+    background: @red;
+}
+
+#workspaces button,
+#workspaces button.active {
+    padding: 0 2px;
 }
 
 #workspaces button {
-  background: transparent;
-  color: @text-color;
-  padding: 3px;
-}
-
-#workspaces button.active {
-  color: @accent;
-  font-weight: bold;
+    color: @surface0;
 }
 
 #workspaces button:hover {
-  background: transparent;
-  box-shadow: none;
-  border-color: transparent;
-  text-shadow: none;
+    background: transparent;
+    box-shadow: none;
+    border-color: transparent;
+    text-shadow: none;
+}
+
+#hardware {
+    background: @green;
 }
 
 #hardware * {
-  margin: 0 5px;
+    margin: 0 5px;
 }
 
-#tray *, #system * {
-  margin: 0 5px;
+#calendar-clock {
+    background: @mauve;
 }
 
-#workspaces, #tray, #system, #clock, #custom-power {
-  margin: 0 5px;
+#tray *,
+#system * {
+    margin: 0 5px;
+}
+
+#tray {
+    background: @base;
+}
+
+#wireplumber {
+    background: @yellow;
+}
+
+#custom-power {
+    color: @text;
+    padding-right: 10px;
+}
+
+#workspaces,
+#hardware,
+#calendar-clock,
+#tray,
+#wireplumber {
+    border-radius: 50px;
+    padding: 0 10px;
+}
+
+#workspaces,
+#hardware,
+#calendar-clock,
+#system,
+#clock,
+#tray,
+#custom-power {
+    margin: 5px;
 }
