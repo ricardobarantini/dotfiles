@@ -6,5 +6,9 @@
 
   "modules-left": ["hyprland/workspaces", "group/hardware"],
   "modules-center": ["group/calendar-clock"],
+<<<<<<< Updated upstream
   "modules-right": ["tray", "group/system", "custom/power"],
+=======
+  "modules-right": ["tray", "group/system", "custom/dark-mode", "custom/power"],
+>>>>>>> Stashed changes
 }

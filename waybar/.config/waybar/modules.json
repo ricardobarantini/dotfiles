@@ -102,5 +102,15 @@
     "format": "",
     "tooltip": false,
     "on-click": "gnome-calendar"
+<<<<<<< Updated upstream
+=======
+  },
+  "custom/dark-mode": {
+    "format": "{}",
+    "exec": "~/dark-mode.sh",
+    "on-click": "~/dark-mode.sh toggle",
+    "restart-interval": 1,
+    "tooltip": false
+>>>>>>> Stashed changes
   }
 }

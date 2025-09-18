@@ -27,12 +27,6 @@ toggle_exact_search = ["ctrl m"]
 keep_open = "shift"
 alternate = "alt"
 
-[keys.ai]
-clear_session = ["ctrl x"]
-copy_last_response = ["ctrl c"]
-resume_session = ["ctrl r"]
-run_last_response = ["ctrl e"]
-
 [events]
 on_activate = ""
 on_selection = ""
@@ -77,7 +71,6 @@ show_sub_when_single = false
 show_icon_when_single = true
 show_generic = true
 history = true
-icon = "applications-other"
 
 [builtins.applications.actions]
 enabled = false

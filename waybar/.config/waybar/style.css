@@ -103,4 +103,12 @@ window#waybar {
 #tray,
 #custom-power {
     margin: 5px;
+<<<<<<< Updated upstream
+=======
+}
+
+#custom-dark-mode {
+  color: @text;
+  margin-right: 5px;
+>>>>>>> Stashed changes
 }
