@@ -30,6 +30,7 @@ fi
 PATH="$PATH:$HOME/.local/bin:$HOME/.config/composer/vendor/bin"
 
 # Aliases
+alias cat="bat"
 alias ls='eza -lh --group-directories-first --icons=auto'
 alias lsa='ls -a'
 alias lt='eza --tree --level=2 --long --icons --git'
@@ -39,6 +40,7 @@ alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=dow
 alias sail="./vendor/bin/sail"
 alias docker-compose="docker compose"
 alias pacman="sudo pacman"
+alias t="tmux a || tmux"
 
 # Functions
 function clone() {
