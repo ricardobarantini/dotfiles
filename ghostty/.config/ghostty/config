@@ -1,7 +1,7 @@
 auto-update = download
 desktop-notifications = false
 font-family = JetBrainsMono Nerd Font
-theme = catppuccin-frappe
+theme = catppuccin-frappe.conf
 confirm-close-surface = false
 window-padding-x = 10
 
