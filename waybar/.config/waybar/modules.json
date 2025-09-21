@@ -105,8 +105,8 @@
   },
   "custom/dark-mode": {
     "format": "{}",
-    "exec": "~/dark-mode.sh",
-    "on-click": "~/dark-mode.sh toggle",
+    "exec": "~/.local/bin/dark-mode.sh",
+    "on-click": "~/.local/bin/dark-mode.sh toggle",
     "restart-interval": 1,
     "tooltip": false
   }
