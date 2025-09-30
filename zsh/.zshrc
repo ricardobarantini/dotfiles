@@ -1,6 +1,7 @@
+export GTK_IM_MODULE=ibus
+
 ZDOTDIR="$HOME/.zsh"
 ZOXIDE_CMD_OVERRIDE="cd"
-
 # Bindkeys
 bindkey '^ ' autosuggest-accept
 
@@ -31,6 +32,7 @@ PATH="$PATH:$HOME/.local/bin:$HOME/.config/composer/vendor/bin"
 
 # Aliases
 alias cat="bat"
+alias grep="rg"
 alias ls='eza -lh --group-directories-first --icons=auto'
 alias lsa='ls -a'
 alias lt='eza --tree --level=2 --long --icons --git'
