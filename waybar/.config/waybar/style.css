@@ -27,63 +27,63 @@
 @define-color crust rgb(35, 38, 52);
 
 * {
-    font-family: "Ubuntu Nerd Font";
-    font-size: 14px;
+  font-family: "Ubuntu Nerd Font";
+  font-size: 14px;
 }
 
 window#waybar {
-    background: transparent;
-    color: @base;
+  background: @base;
+  color: @base;
 }
 
 #workspaces {
-    background: @red;
+  background: @red;
 }
 
 #workspaces button,
 #workspaces button.active {
-    padding: 0 2px;
+  padding: 0 2px;
 }
 
 #workspaces button {
-    color: @surface0;
+  color: @surface0;
 }
 
 #workspaces button:hover {
-    background: transparent;
-    box-shadow: none;
-    border-color: transparent;
-    text-shadow: none;
+  background: transparent;
+  box-shadow: none;
+  border-color: transparent;
+  text-shadow: none;
 }
 
 #hardware {
-    background: @green;
+  background: @green;
 }
 
 #hardware * {
-    margin: 0 5px;
+  margin: 0 5px;
 }
 
 #calendar-clock {
-    background: @mauve;
+  background: @mauve;
 }
 
 #tray *,
 #system * {
-    margin: 0 5px;
+  margin: 0 5px;
 }
 
 #tray {
-    background: @base;
+  background: @base;
 }
 
 #wireplumber {
-    background: @yellow;
+  background: @yellow;
 }
 
 #custom-power {
-    color: @text;
-    padding-right: 10px;
+  color: @text;
+  padding-right: 10px;
 }
 
 #workspaces,
@@ -91,8 +91,8 @@ window#waybar {
 #calendar-clock,
 #tray,
 #wireplumber {
-    border-radius: 50px;
-    padding: 0 10px;
+  border-radius: 50px;
+  padding: 0 10px;
 }
 
 #workspaces,
@@ -102,7 +102,7 @@ window#waybar {
 #clock,
 #tray,
 #custom-power {
-    margin: 5px;
+  margin: 5px;
 }
 
 #custom-dark-mode {
