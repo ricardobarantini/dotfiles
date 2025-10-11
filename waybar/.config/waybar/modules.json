@@ -40,12 +40,15 @@
   },
   "group/hardware": {
     "orientation": "horizontal",
-    "modules": ["cpu", "memory", "disk", "network"]
+    "modules": ["cpu", "memory", "disk"]
   },
   "cpu": {
     "interval": 10,
     "format": " {usage}%",
-    "on-click": "ghostty -e btop"
+    "tooltip": false,
+    "on-click": "ghostty -e btop",
+    "on-scroll-up": "",
+    "on-scroll-down": ""
   },
   "memory": {
     "interval": 10,
@@ -75,8 +78,7 @@
     "on-click-middle": "wpctl set-mute @DEFAULT_SINK@ toggle"
   },
   "network": {
-    "interval": 10,
-    "format": "󰛶 {bandwidthUpBytes} 󰛴 {bandwidthDownBytes}",
+    "format-ethernet": "󰈀",
     "on-click": "nm-connection-editor",
     "tooltip": false
   },
