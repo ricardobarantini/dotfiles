@@ -1,116 +1,66 @@
 {
-  "custom/launcher": {
-    "format": "",
-    "on-click": "rofi -show",
-    "tooltip": false
-  },
-  "group/quicklinks": {
-    "orientation": "horizontal",
-    "modules": ["custom/filemanager", "custom/browser", "custom/terminal"]
-  },
-  "custom/filemanager": {
-    "format": "",
-    "on-click": "nautilus",
-    "tooltip": false
-  },
-  "custom/browser": {
-    "format": "",
-    "on-click": "librewolf",
-    "tooltip": false
-  },
-  "custom/terminal": {
-    "format": "",
-    "on-click": "ghostty",
-    "tooltip": false
-  },
   "hyprland/workspaces": {
-    "all-outputs": false,
-    "show-special": true,
     "format": "{icon}",
+    "all-outputs": true,
     "format-icons": {
-      "active": "",
-      "default": "",
-      "empty": "",
-      "special": "",
-      "urgent": ""
-    },
-    "persistent-workspaces": {
-      "*": [1, 2, 3, 4, 5]
+      "active": ""
     }
-  },
-  "group/hardware": {
-    "orientation": "horizontal",
-    "modules": ["cpu", "memory", "disk"]
   },
   "cpu": {
     "interval": 10,
-    "format": " {usage}%",
-    "tooltip": false,
-    "on-click": "ghostty -e btop",
-    "on-scroll-up": "",
-    "on-scroll-down": ""
+    "format": "cpu {usage}%",
+    "tooltip": false
   },
   "memory": {
     "interval": 10,
-    "format": " {percentage}%"
+    "format": "ram {percentage}%"
   },
   "disk": {
     "interval": 10,
-    "format": " {percentage_used}%",
-    "on-click": "ghostty -e ncdu --color dark /",
-    "on-click-middle": "nautilus"
+    "format": "disks / {percentage_used}%"
   },
-  "wlr/taskbar": {
-    "all-outputs": true,
-    "on-click": "activate"
+  "disk#ssd": {
+    "interval": 10,
+    "format": "/ssd {percentage_used}%",
+    "path": "/mnt/ssd-seagate"
   },
-  "group/system": {
+  "group/disks": {
     "orientation": "horizontal",
-    "modules": ["wireplumber"]
+    "modules": ["disk", "disk#ssd"]
   },
   "wireplumber": {
-    "format": "{icon} {volume}%",
-    "format-icons": ["󰝟", "", "", ""],
-    "format-muted": "󰝟",
-    "on-click": "pavucontrol",
-    "on-scroll-up": "~/.config/hypr/scripts/wireplumber-volume-up.sh",
-    "on-scroll-down": "~/.config/hypr/scripts/wireplumber-volume-down.sh",
-    "on-click-middle": "wpctl set-mute @DEFAULT_SINK@ toggle"
+    "format": "{icon}  {volume}%",
+    "format-icons": ["󰝟", "", "", "", "", "", "", "", "", "", ""],
+    "format-muted": "󰝟  muted",
+    "on-scroll-up": "swayosd-client --output-volume raise",
+    "on-scroll-down": "swayosd-client --output-volume lower",
+    "on-click-middle": "swayosd-client --output-volume mute-toggle",
+    "tooltip": false
   },
   "network": {
+    "interval": 10,
+    "format-wifi": "{icon} {essid}",
     "format-ethernet": "󰈀",
-    "on-click": "nm-connection-editor",
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
     "tooltip": false
   },
   "clock": {
-    "format": "{:%a, %b %d %H:%M}",
-    "format-alt": "{:%A, %B %d %H:%M}",
-    "timezone": "America/Sao_Paulo",
-    "tooltip": false
+    "format": "{:L%a, %d %b %H:%M}",
+    "timezone": "America/Sao_Paulo"
   },
-  "custom/power": {
-    "format": "",
-    "tooltip": false,
-    "on-click": "~/.local/bin/menu system"
+  "tray": {
+    "spacing": 3
   },
-  "custom/wf-recorder": {
-    "format": "󰑋 HDMI-A-1",
-    "tooltip": "false"
-  },
-  "group/calendar-clock": {
-    "orientation": "horizontal",
-    "modules": ["custom/calendar", "clock"]
-  },
-  "custom/calendar": {
-    "format": "",
-    "tooltip": false,
-    "on-click": "gnome-calendar"
-  },
-  "custom/dark-mode": {
-    "format": "{}",
-    "exec": "~/.local/bin/dark-mode.sh",
-    "on-click": "~/.local/bin/dark-mode.sh toggle",
-    "restart-interval": 1,
-    "tooltip": false
+  "hyprland/window": {
+    "format": "{initialClass}",
+    "rewrite": {
+      "brave-browser": "Brave",
+      "com.mitchellh.ghostty": "Terminal",
+      "Code": "Visual Studio Code",
+      "discord": "Discord",
+      "jetbrains-phpstorm": "PhpStorm",
+      "Spotify": "Spotify",
+      "steam": "Steam"
+    }
   }
 }

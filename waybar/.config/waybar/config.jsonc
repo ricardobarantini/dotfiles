@@ -4,7 +4,7 @@
 
   "include": ["~/.config/waybar/modules.json"],
 
-  "modules-left": ["hyprland/workspaces", "group/hardware"],
-  "modules-center": ["group/calendar-clock"],
-  "modules-right": ["tray", "group/system", "custom/dark-mode", "custom/power"]
+  "modules-left": ["cpu", "memory", "group/disks", "hyprland/window"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": ["tray", "wireplumber", "network", "clock"]
 }
