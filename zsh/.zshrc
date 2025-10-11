@@ -28,7 +28,9 @@ if [ -d "${PHPENV_ROOT}" ]; then
   eval "$(phpenv init -)"
 fi
 
-PATH="$PATH:$HOME/.local/bin:$HOME/.config/composer/vendor/bin"
+GOPATH="$HOME/.local/share/go"
+GOBIN="$GOPATH/bin"
+PATH="$PATH:$HOME/.local/bin:$HOME/.config/composer/vendor/bin:$GOBIN"
 
 # Aliases
 alias cat="bat"
@@ -48,3 +50,10 @@ alias t="tmux a || tmux"
 function clone() {
   git clone git@github.com:"$1".git
 }
+
+# bun completions
+[ -s "/home/ricardo/.bun/_bun" ] && source "/home/ricardo/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
