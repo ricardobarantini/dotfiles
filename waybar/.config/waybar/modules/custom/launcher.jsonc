@@ -1,0 +1,7 @@
+{
+    "custom/launcher": {
+        "format": "󰣇",
+        "on-click": "uwsm app -- walker",
+		"tooltip": false
+    }
+}

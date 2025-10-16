@@ -1,0 +1,13 @@
+{
+    "upower#keyboard": {
+        "native-path": "hidpp_battery_0",
+        "icon-size": 14,
+        "tooltip": false
+    },
+
+    "upower#mouse": {
+        "native-path": "hidpp_battery_1",
+        "icon-size": 14,
+        "tooltip": false
+    }
+}

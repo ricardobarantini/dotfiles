@@ -1,0 +1,13 @@
+{
+    "clock#time": {
+        "format": " {:L%H:%M}",
+        "timezone": "America/Sao_Paulo",
+        "tooltip": false
+    },
+
+    "clock#date": {
+        "format": " {:L%a, %d %b}",
+        "on-click": "uwsm app -- gnome-calendar",
+        "tooltip": false
+    }
+}

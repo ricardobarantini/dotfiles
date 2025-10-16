@@ -1,0 +1,68 @@
+{
+    "layer": "top",
+	"height": 0,
+	"width": 0,
+	"margin": 0,
+	"spacing": 0,
+	"mode": "dock",
+	"reload_style_on_change": true,
+
+    "include": [
+        "~/.config/waybar/modules/custom/dividers.jsonc",
+        "~/.config/waybar/modules/custom/launcher.jsonc",
+        "~/.config/waybar/modules/custom/power.jsonc",
+        "~/.config/waybar/modules/custom/yay-updates.jsonc",
+
+        "~/.config/waybar/modules/battery.jsonc",
+        "~/.config/waybar/modules/clock.jsonc",
+        "~/.config/waybar/modules/cpu.jsonc",
+        "~/.config/waybar/modules/custom/dark-mode.jsonc",
+        "~/.config/waybar/modules/disk.jsonc",
+        "~/.config/waybar/modules/memory.jsonc",
+        "~/.config/waybar/modules/network.jsonc",
+        "~/.config/waybar/modules/tray.jsonc",
+        "~/.config/waybar/modules/upower.jsonc",
+        "~/.config/waybar/modules/wireplumber.jsonc",
+
+        "~/.config/waybar/modules/hyprland/window.jsonc",
+        "~/.config/waybar/modules/hyprland/windowcount.jsonc",
+        "~/.config/waybar/modules/hyprland/workspaces.jsonc"
+    ],
+
+    "modules-left": [
+        "custom/left_workspaces",
+        "hyprland/workspaces",
+        "custom/right_workspaces",
+        "hyprland/window"
+    ],
+
+    "modules-center": [
+        "custom/left_cpu",
+        "cpu",
+        "custom/left_memory",
+        "memory",
+        "custom/left_disk",
+        "disk",
+        "custom/right_disk_inv",
+        "custom/left_launcher",
+        "custom/launcher",
+        "custom/right_launcher",
+        "custom/left_time_inv",
+        "clock#time",        
+        "custom/right_time",
+        "clock#date",
+        "custom/right_date",
+        "network",
+        "custom/dark-mode",
+        "custom/right_network"
+    ],
+
+    "modules-right": [
+        "custom/left_tray",
+        "tray",
+        "custom/left_wireplumber",
+        "wireplumber",
+        "custom/left_power",
+        "custom/power"
+    ]
+}

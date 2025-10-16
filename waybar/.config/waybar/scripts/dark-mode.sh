@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# printf '{ "text": "$text", "tooltip": "tooltip", "percentage": "$percentage", "class": "$class" }'
-# echo "{\"icon\": \"teste\"}" | jq -c .
-
 check_mode() {
   local current_scheme=$(gsettings get org.gnome.desktop.interface color-scheme)
 

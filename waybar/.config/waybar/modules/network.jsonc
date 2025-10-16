@@ -1,0 +1,10 @@
+{
+    "network": {
+        "interval": 10,
+        "format-wifi": "{icon} {signalStrength}",
+        "format-ethernet": "󰈀",
+        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+        "tooltip-format-wifi": "Network: {essid}\nDownload: {bandwidthDownBytes}\nUpload: {bandwidthUpBytes}",
+        "on-click": "ghostty -e nmtui"
+    }
+}

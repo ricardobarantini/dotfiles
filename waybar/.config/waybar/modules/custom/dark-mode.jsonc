@@ -1,0 +1,9 @@
+{
+    "custom/dark-mode": {
+        "format": "{}",
+        "exec": "~/.config/waybar/scripts/dark-mode.sh",
+        "on-click": "~/.config/waybar/scripts/dark-mode.sh toggle",
+        "interval": 1,
+        "tooltip": false
+    }
+}

@@ -1,0 +1,305 @@
+@import "themes/catppuccin/frappe.css";
+
+@define-color main-bg @base;
+@define-color main-fg @text;
+@define-color tt-bg rgba(65, 69, 89, 0.9);
+@define-color accent @red;
+@define-color muted @maroon;
+@define-color shade0 @surface0;
+@define-color shade1 @surface1;
+@define-color shade2 @surface2;
+@define-color tray-menuitem-hover-bg @crust;
+@define-color tray-menuitem-disabled @overlay0;
+
+/* Left */
+@define-color workspaces @shade0;
+
+/* Center */
+@define-color cpu @shade0;
+@define-color memory @shade1;
+@define-color disk @shade2;
+@define-color time @shade2;
+@define-color date @shade1;
+@define-color network @shade0;
+@define-color darkmode @shade0;
+@define-color updates @shade0;
+@define-color battery @shade2;
+
+/* Right */
+@define-color tray @shade1;
+@define-color wireplumber @shade0;
+@define-color power @main-bg;
+
+* {
+    font-family: "CaskaydiaCove NF";
+    font-size: 16px;
+    color: @main-fg;
+}
+
+window#waybar {
+    background: @main-bg;
+}
+
+window#waybar > box {
+    margin: 4px;
+}
+
+button {
+    padding: 0 5px;
+}
+
+button:hover {
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    color: @accent;
+    text-shadow: none;
+}
+
+label {
+    font-size: 14px;
+}
+
+tooltip {
+    background: @tt-bg;
+}
+
+/**
+ * custom/dividers
+ */
+#custom-left_workspaces,
+#custom-right_workspaces,
+#custom-left_cpu,
+#custom-left_memory,
+#custom-left_disk,
+#custom-right_disk_inv,
+#custom-left_launcher,
+#custom-right_launcher,
+#custom-left_time_inv,
+#custom-right_time,
+#custom-right_date,
+#custom-right_network,
+#custom-left_wireplumber,
+#custom-left_tray,
+#custom-left_power
+ {
+    font-size: 24px;
+}
+
+#custom-left_workspaces,
+#custom-right_workspaces {
+    color: @workspaces;
+}
+
+#workspaces {
+    padding: 0px 0px;
+    background: @workspaces;
+}
+
+#workspaces .active label { 
+    font-size: 20px;
+    color: @accent;
+}
+
+/**
+ * hyprland/window
+ */
+#window {
+    margin: 0 10px;
+}
+
+/**
+ * hyprland/windowcount
+ */
+#windowcount {
+    padding: 0 5px;
+}
+
+/**
+ * cpu
+ */
+#custom-left_cpu {
+    color: @cpu;
+}
+
+#cpu {
+    background: @cpu;
+    font-size: 14px;
+    padding: 0 5px;
+}
+
+/**
+ * memory
+ */
+#custom-left_memory {
+    background: @cpu;
+    color: @memory;
+}
+
+#memory {
+    background: @memory;
+    font-size: 14px;
+    padding: 0 5px;
+}
+
+/**
+ * disk
+ */
+#custom-left_disk {
+    background: @memory;
+    color: @disk;
+}
+
+#disk {
+    background: @disk;
+    font-size: 14px;
+    padding: 0 5px;
+}
+
+#custom-right_disk_inv {
+    background: @disk;
+    color: @main-bg;
+}
+
+/**
+ * custom/launcher
+ */
+#custom-left_launcher,
+#custom-right_launcher {
+    color: @accent;
+}
+
+#custom-launcher {
+    background: @accent;
+    color: @main-bg;
+    font-size: 23px;
+    padding: 0 10px 0 5px;
+}
+
+/**
+ * clock#time
+ */
+#custom-left_time_inv {
+    background: @time;
+    color: @main-bg;
+}
+
+#clock.time {
+    background: @time;
+    font-size: 14px;
+    padding: 0 5px;
+}
+
+#custom-right_time {
+    background: @date;
+    color: @time;
+}
+
+/**
+ * clock#date
+ */
+#clock.date {
+    background: @date;
+    font-size: 14px;
+    padding: 0 5px;
+}
+
+#custom-right_date {
+    background: @network;
+    color: @date;
+}
+
+/**
+ * network
+ */
+#network {
+    background: @network;
+    padding: 0 5px;
+    font-size: 14px;
+}
+
+#custom-right_network {
+    background: @main-bg;
+    color: @network;
+}
+
+/**
+ * custom/dark-mode
+ */
+#custom-dark-mode {
+    background: @darkmode;
+    padding: 0 10px 0 5px;
+}
+
+/**
+ * custom/yay-updates
+ */
+#custom-yay-updates {
+    background: @updates;
+    padding: 0 10px 0 5px;
+}
+
+/**
+ * tray
+ */
+#custom-left_tray {
+    background: @main-bg;
+    color: @tray;
+}
+
+#tray {
+    background: @tray;
+    padding: 0 5px;
+}
+
+#tray menu {
+    background: @tt-bg;
+}
+
+#tray menu menuitem label:disabled {
+    color: @tray-menuitem-disabled;
+}
+
+#tray menu menuitem:hover {
+    background: @tray-menuitem-hover-bg;
+}
+
+/**
+ * wireplumber
+ */
+#custom-left_wireplumber {
+    background: @tray;
+    color: @wireplumber;
+}
+
+#wireplumber {
+    background: @wireplumber;
+    font-size: 14px;
+    padding: 0 15px 0 5px;
+}
+
+#wireplumber.sink-muted {
+    color: @muted;
+}
+
+/**
+ * custom/power
+ */
+#custom-left_power {
+    background: @wireplumber;
+    color: @main-bg;
+}
+
+#custom-power {
+    background: @power;
+    margin: 0 10px;
+}
+
+#custom-power:hover {
+    color: @accent;
+}
+
+#custom-spacer {
+    background: red;
+    margin-left: 1000px;
+}

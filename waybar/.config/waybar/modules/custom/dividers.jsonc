@@ -1,0 +1,76 @@
+{
+    "custom/left_workspaces": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/right_workspaces": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/left_cpu": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/left_memory": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/left_disk": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/right_disk_inv": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/left_launcher": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/right_launcher": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/left_time_inv": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/right_time": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/right_date": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/right_network": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/left_wireplumber": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/left_tray": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/left_power": {
+		"format": "",
+		"tooltip": false
+	}
+}
