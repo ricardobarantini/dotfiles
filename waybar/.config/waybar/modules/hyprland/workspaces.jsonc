@@ -1,5 +1,5 @@
 {
-	"hyprland/workspaces": {
+	"hyprland/workspaces#arrow": {
 		"format": "{icon}",
 		"format-icons": {
 			"active": "",
@@ -11,5 +11,13 @@
 		"on-scroll-up": "hyprctl dispatch workspace +1",
 		"on-scroll-down": "hyprctl dispatch workspace -1",
 		"cursor": true
+	},
+
+	"hyprland/workspaces#simple": {
+		"format": "{icon}",
+		"all-outputs": true,
+		"format-icons": {
+			"active": ""
+		}
 	}
 }

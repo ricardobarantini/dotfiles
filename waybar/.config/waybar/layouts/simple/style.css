@@ -1,0 +1,61 @@
+window#waybar {
+  background: transparent;
+  font-family: "CaskaydiaCove NF";
+  font-size: 14px;
+}
+
+window#waybar > box {
+  margin: 4px;
+}
+
+#workspaces {
+  background: rgba(30, 30, 46, .7);
+  border-radius: 50px;
+  padding: 0px 5px;
+}
+
+#cpu, #memory, #disk, #clock, #wireplumber, #network, #window, #tray {
+  background: rgba(30, 30, 46, .7);
+  border-radius: 50px;
+  padding: 0px 10px;
+}
+
+#workspaces button,
+#workspaces button.active {
+  padding: 0 3px;
+}
+
+#workspaces button, #cpu, #memory, #disk, #wireplumber, #clock, #network, #window, #tray {
+  color: rgb(205, 214, 244);
+}
+
+#workspaces button:hover {
+  background: transparent;
+  box-shadow: none;
+  border-color: transparent;
+  text-shadow: none;
+}
+
+.modules-left, .modules-center, .modules-right {
+  margin-top: 0px;
+}
+
+.modules-left {
+  margin-left: 0px;
+}
+
+.modules-left * {
+  margin-right: 3px;
+}
+
+.modules-right {
+  margin-right: 0px;
+}
+
+.modules-right * {
+  margin-left: 3px;
+}
+
+window#waybar.empty #window {
+  background: transparent;
+}
