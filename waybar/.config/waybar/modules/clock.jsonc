@@ -9,5 +9,13 @@
         "format": " {:L%a, %d %b}",
         "on-click": "uwsm app -- gnome-calendar",
         "tooltip": false
+    },
+
+    "group/clock": {
+        "orientation": "horizontal",
+        "modules": [
+            "clock#date",
+            "clock#time"
+        ]
     }
 }
