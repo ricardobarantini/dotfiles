@@ -15,16 +15,13 @@
         "~/.config/waybar/modules/network.jsonc",
         "~/.config/waybar/modules/tray.jsonc",
         "~/.config/waybar/modules/wireplumber.jsonc",
-
-        "~/.config/waybar/modules/hyprland/window.jsonc",
         "~/.config/waybar/modules/hyprland/workspaces.jsonc"
     ],
 
     "modules-left": [
         "cpu",
         "memory",
-        "disk",
-        "hyprland/window"
+        "disk"
     ],
 
     "modules-center": [
