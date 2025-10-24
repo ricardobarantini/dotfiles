@@ -32,6 +32,7 @@
         "tray",
         "wireplumber",
         "network",
-        "group/clock"
+        "clock#date",
+        "clock#time"
     ]
 }
