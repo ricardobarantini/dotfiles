@@ -1,6 +1,6 @@
 # Dotfiles
 
-![.dotfiles banner](dotfiles.png)
+![.dotfiles banner](.github/dotfiles.png)
 
 This is my personal dotfiles to use on Arch with Hyprland.
 
