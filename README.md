@@ -20,7 +20,7 @@ This is my personal dotfiles to use on Arch with Hyprland.
 - [walker](https://github.com/abenz1267/walker) (with [elephant](https://github.com/abenz1267/elephant))
 - [waybar](https://github.com/Alexays/Waybar)
 - [zed](https://github.com/zed-industries/zed)
-- zsh
+- zsh (with [Antidote](https://github.com/mattmc3/antidote))
 
 ## Installation
 
@@ -41,4 +41,4 @@ Soon.
 
 ## License
 
-This dotfiles is released under the MIT License.
+This dotfiles is released under the [MIT License](LICENSE).
