@@ -1,34 +1,31 @@
 {
-	"hyprland/workspaces#arrow": {
-		"format": "{icon}",
-		"format-icons": {
-			"active": "",
-			"default": ""
-		},
-		"persistent-workspaces": {
-			"*": [1, 2, 3, 4, 5]
-		},
-		"on-scroll-up": "hyprctl dispatch workspace +1",
-		"on-scroll-down": "hyprctl dispatch workspace -1",
-		"cursor": true
-	},
+  "hyprland/workspaces#arrow": {
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",
+      "default": "",
+    },
+    "persistent-workspaces": {
+      "*": [1, 2, 3, 4, 5],
+    },
+    "on-scroll-up": "hyprctl dispatch workspace +1",
+    "on-scroll-down": "hyprctl dispatch workspace -1",
+    "cursor": true,
+  },
 
-	"hyprland/workspaces#simple": {
-		"format": "{icon}",
-		"all-outputs": true,
-		"format-icons": {
-			"active": "",
-			"default": "",
-			"empty": "",
-			"persistent": "",
-			"special": "󱢼",
-			"urgent": ""
-		},
-		"persistent-workspaces": {
-			"*": [1, 2, 3, 4, 5]
-		},
-		"on-scroll-up": "hyprctl dispatch workspace +1",
-		"on-scroll-down": "hyprctl dispatch workspace -1",
-		"cursor": true
-	}
+  "hyprland/workspaces#simple": {
+    "format": "{icon}",
+    "all-outputs": true,
+    "persistent-workspaces": {
+      "*": [1, 2, 3, 4, 5],
+    },
+    "show-special": true,
+    "special-visible-only": true,
+    "on-scroll-up": "hyprctl dispatch workspace +1",
+    "on-scroll-down": "hyprctl dispatch workspace -1",
+    "cursor": true,
+    "format-icons": {
+      "special": ""
+    }
+  },
 }
