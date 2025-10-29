@@ -26,9 +26,9 @@ resume_last_query = ["ctrl r"]
 quick_activate = ["F1", "F2", "F3", "F4", "F5"]
 
 [providers]
-default = ["desktopapplications", "calc", "runner", "menus", "websearch"]
+default = ["desktopapplications", "menus"]
 empty = ["desktopapplications"]
-max_results = 50
+max_results = 30
 
 [providers.sets]
 [providers.max_results_provider]
@@ -37,50 +37,11 @@ max_results = 50
 prefix = ";"
 provider = "providerlist"
 
-[[providers.prefixes]]
-prefix = "/"
-provider = "files"
-
-[[providers.prefixes]]
-prefix = "."
-provider = "symbols"
-
-[[providers.prefixes]]
-prefix = "="
-provider = "calc"
-
-[[providers.prefixes]]
-prefix = "@"
-provider = "websearch"
-
-[[providers.prefixes]]
-prefix = ":"
-provider = "clipboard"
-
-[providers.clipboard]
-time_format = "%d.%m. - %H:%M" # format for the clipboard item date
-
 [providers.actions]
 dmenu = [{ action = "select", default = true, bind = "Return" }]
 
 providerlist = [
   { action = "activate", default = true, bind = "Return", after = "ClearReload" },
-]
-
-archlinuxpkgs = [
-  { action = "install", bind = "Return", default = true },
-  { action = "remove", bind = "Return" },
-]
-
-calc = [
-  { action = "copy", default = true, bind = "Return" },
-  { action = "delete", bind = "ctrl d", after = "AsyncReload" },
-  { action = "save", bind = "ctrl s", after = "AsyncClearReload" },
-]
-
-websearch = [
-  { action = "search", default = true, bind = "Return" },
-  { action = "erase_history", label = "clear hist", bind = "ctrl h", after = "Reload" },
 ]
 
 desktopapplications = [
@@ -91,24 +52,4 @@ desktopapplications = [
   { action = "unpin", bind = "ctrl p", after = "AsyncReload" },
   { action = "pinup", bind = "ctrl n", after = "AsyncReload" },
   { action = "pindown", bind = "ctrl m", after = "AsyncReload" },
-]
-
-files = [
-  { action = "open", default = true, bind = "Return" },
-  { action = "opendir", label = "open dir", bind = "ctrl Return" },
-  { action = "copypath", label = "copy path", bind = "ctrl shift c" },
-  { action = "copyfile", label = "copy file", bind = "ctrl c" },
-]
-
-symbols = [
-  { action = "run_cmd", label = "select", default = true, bind = "Return" },
-  { action = "erase_history", label = "clear hist", bind = "ctrl h", after = "Reload" },
-]
-
-clipboard = [
-  { action = "copy", default = true, bind = "Return" },
-  { action = "remove", bind = "ctrl d", after = "ClearReload" },
-  { action = "remove_all", global = true, label = "clear", bind = "ctrl shift d", after = "ClearReload" },
-  { action = "toggle_images", global = true, label = "toggle images", bind = "ctrl i", after = "ClearReload" },
-  { action = "edit", bind = "ctrl o" },
 ]
