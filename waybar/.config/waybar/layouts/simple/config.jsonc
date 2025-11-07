@@ -15,18 +15,20 @@
         "~/.config/waybar/modules/network.jsonc",
         "~/.config/waybar/modules/tray.jsonc",
         "~/.config/waybar/modules/wireplumber.jsonc",
+        "~/.config/waybar/modules/hyprland/windowcount.jsonc",
         "~/.config/waybar/modules/hyprland/workspaces.jsonc",
         "~/.config/waybar/modules/custom/toggle-scheme.jsonc"
     ],
 
     "modules-left": [
         "hyprland/workspaces#simple",
-        "custom/toggle-scheme"
+        "hyprland/windowcount"
     ],
 
     "modules-center": [
         "clock#date",
-        "clock#time"
+        "clock#time",
+        "custom/toggle-scheme"
     ],
 
     "modules-right": [
