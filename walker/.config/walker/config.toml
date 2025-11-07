@@ -26,7 +26,7 @@ resume_last_query = ["ctrl r"]
 quick_activate = ["F1", "F2", "F3", "F4", "F5"]
 
 [providers]
-default = ["desktopapplications", "menus"]
+default = ["desktopapplications"]
 empty = ["desktopapplications"]
 max_results = 30
 
@@ -34,15 +34,9 @@ max_results = 30
 [providers.max_results_provider]
 
 [[providers.prefixes]]
-prefix = ";"
-provider = "providerlist"
 
 [providers.actions]
 dmenu = [{ action = "select", default = true, bind = "Return" }]
-
-providerlist = [
-  { action = "activate", default = true, bind = "Return", after = "ClearReload" },
-]
 
 desktopapplications = [
   { action = "start", default = true, bind = "Return" },
