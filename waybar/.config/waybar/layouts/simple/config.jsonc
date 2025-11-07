@@ -15,24 +15,23 @@
         "~/.config/waybar/modules/network.jsonc",
         "~/.config/waybar/modules/tray.jsonc",
         "~/.config/waybar/modules/wireplumber.jsonc",
-        "~/.config/waybar/modules/hyprland/workspaces.jsonc"
+        "~/.config/waybar/modules/hyprland/workspaces.jsonc",
+        "~/.config/waybar/modules/custom/toggle-scheme.jsonc"
     ],
 
     "modules-left": [
-        "cpu",
-        "memory",
-        "disk"
+        "hyprland/workspaces#simple",
+        "custom/toggle-scheme"
     ],
 
     "modules-center": [
-        "hyprland/workspaces#simple"
+        "clock#date",
+        "clock#time"
     ],
 
     "modules-right": [
         "tray",
         "wireplumber",
-        "network",
-        "clock#date",
-        "clock#time"
+        "network"        
     ]
 }

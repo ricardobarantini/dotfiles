@@ -224,9 +224,9 @@ tooltip {
 }
 
 /**
- * custom/dark-mode
+ * custom/toggle-scheme
  */
-#custom-dark-mode {
+#custom-toggle-scheme {
     background: @darkmode;
     padding: 0 10px 0 5px;
 }

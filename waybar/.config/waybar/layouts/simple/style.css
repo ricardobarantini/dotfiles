@@ -67,7 +67,8 @@ window#waybar > box {
 #clock,
 #network,
 #window,
-#tray {
+#tray,
+#custom-toggle-scheme {
     color: rgb(205, 214, 244);
 }
 
@@ -82,6 +83,14 @@ window#waybar > box {
 }
 
 .modules-left * {
+    margin-right: 0px;
+}
+
+.modules-center {
+    margin-left: 0px;
+}
+
+.modules-center * {
     margin-right: 3px;
 }
 
@@ -95,4 +104,10 @@ window#waybar > box {
 
 window#waybar.empty #window {
     background: transparent;
+}
+
+#custom-toggle-scheme {
+    background: rgba(30, 30, 46, 0.7);
+    border-radius: 50px;
+    padding: 1px 15px 0 10px;
 }

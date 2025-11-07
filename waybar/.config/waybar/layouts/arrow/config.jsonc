@@ -16,7 +16,7 @@
         "~/.config/waybar/modules/battery.jsonc",
         "~/.config/waybar/modules/clock.jsonc",
         "~/.config/waybar/modules/cpu.jsonc",
-        "~/.config/waybar/modules/custom/dark-mode.jsonc",
+        "~/.config/waybar/modules/custom/toggle-scheme.jsonc",
         "~/.config/waybar/modules/disk.jsonc",
         "~/.config/waybar/modules/memory.jsonc",
         "~/.config/waybar/modules/network.jsonc",
@@ -53,7 +53,7 @@
         "clock#date",
         "custom/right_date",
         "network",
-        "custom/dark-mode",
+        "custom/toggle-scheme",
         "custom/right_network"
     ],
 
