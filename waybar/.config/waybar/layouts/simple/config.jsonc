@@ -1,39 +1,42 @@
 {
-    "layer": "top",
-	"height": 0,
-	"width": 0,
-	"margin": 0,
-	"spacing": 0,
-	"mode": "dock",
-	"reload_style_on_change": true,
+  "layer": "top",
+  "height": 0,
+  "width": 0,
+  "margin": 0,
+  "spacing": 0,
+  "mode": "dock",
+  "reload_style_on_change": true,
 
-    "include": [
-        "~/.config/waybar/modules/clock.jsonc",
-        "~/.config/waybar/modules/cpu.jsonc",
-        "~/.config/waybar/modules/disk.jsonc",
-        "~/.config/waybar/modules/memory.jsonc",
-        "~/.config/waybar/modules/network.jsonc",
-        "~/.config/waybar/modules/tray.jsonc",
-        "~/.config/waybar/modules/wireplumber.jsonc",
-        "~/.config/waybar/modules/hyprland/windowcount.jsonc",
-        "~/.config/waybar/modules/hyprland/workspaces.jsonc",
-        "~/.config/waybar/modules/custom/toggle-scheme.jsonc"
-    ],
+  "include": [
+    "~/.config/waybar/modules/custom/dividers.jsonc",
+    "~/.config/waybar/modules/clock.jsonc",
+    "~/.config/waybar/modules/cpu.jsonc",
+    "~/.config/waybar/modules/disk.jsonc",
+    "~/.config/waybar/modules/memory.jsonc",
+    "~/.config/waybar/modules/network.jsonc",
+    "~/.config/waybar/modules/tray.jsonc",
+    "~/.config/waybar/modules/wireplumber.jsonc",
+    "~/.config/waybar/modules/hyprland/window.jsonc",
+    "~/.config/waybar/modules/hyprland/windowcount.jsonc",
+    "~/.config/waybar/modules/hyprland/workspaces.jsonc",
+    "~/.config/waybar/modules/custom/toggle-scheme.jsonc",
+    "~/.config/waybar/modules/custom/vpn-status.jsonc",
+  ],
 
-    "modules-left": [
-        "hyprland/workspaces#simple",
-        "hyprland/windowcount"
-    ],
+  "modules-left": [
+    "hyprland/workspaces#simple",
+    "custom/divider_left",
+    "hyprland/window",
+  ],
 
-    "modules-center": [
-        "clock#date",
-        "clock#time",
-        "custom/toggle-scheme"
-    ],
+  "modules-center": ["clock"],
 
-    "modules-right": [
-        "tray",
-        "wireplumber",
-        "network"        
-    ]
+  "modules-right": [
+    "tray",
+    "custom/divider_right",
+    "custom/toggle-scheme",
+    "wireplumber",
+    "custom/vpn-status",
+    "network",
+  ],
 }

@@ -1,7 +1,8 @@
-background-color=#303446
-text-color=#c6d0f5
-border-radius=5
-progress-color=over #414559
+background-color=#45475a
+text-color=#cdd6f4
+border-radius=3
+border-color=#45475a
+progress-color=over #eba0ac
 width=420
 height=110
 padding=10
@@ -12,8 +13,8 @@ default-timeout=5000
 max-icon-size=32
 
 [urgency=high]
-background-color=#e78284
-border-color=#e78284
+background-color=#f38ba8
+border-color=#f38ba8
 text-color=#303446
 
 [app-name=wp-vol]
@@ -31,3 +32,7 @@ border-radius=10
 [app-name=volume group-index=0]
 # Only show last notification
 invisible=0
+
+[app-name=Slack]
+icons=1
+icon-path=/usr/share/icons/Numix-Circle/48/apps/com.slack.Slack.svg

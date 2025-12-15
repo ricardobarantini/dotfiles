@@ -1,21 +1,26 @@
 {
-    "clock#time": {
-        "format": " {:L%H:%M}",
-        "timezone": "America/Sao_Paulo",
-        "tooltip": false
-    },
+  "clock": {
+    "format": "{:L%d %R}",
+    "format-alt": "{:L%A, %x}",
+    "timezone": "America/Sao_Paulo",
+    "tooltip": false,
+  },
 
-    "clock#date": {
-        "format": " {:L%a, %d %b}",
-        "on-click": "uwsm app -- gnome-calendar",
-        "tooltip": false
-    },
+  "clock#time": {
+    "format": " {:L%H:%M}",
+    "timezone": "America/Sao_Paulo",
+    "tooltip": false,
+  },
 
-    "group/clock": {
-        "orientation": "horizontal",
-        "modules": [
-            "clock#date",
-            "clock#time"
-        ]
-    }
+  "clock#date": {
+    "format": " {:L%a, %d %b}",
+    "on-click": "uwsm app -- gnome-calendar",
+    "tooltip": false,
+  },
+
+  "group/clock": {
+    "orientation": "horizontal",
+    "modules": ["clock#date", "clock#time"],
+  },
 }
+

@@ -33,7 +33,7 @@ max_results = 30
 [providers.sets]
 [providers.max_results_provider]
 
-[[providers.prefixes]]
+# [[providers.prefixes]]
 
 [providers.actions]
 dmenu = [{ action = "select", default = true, bind = "Return" }]

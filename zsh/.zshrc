@@ -1,4 +1,7 @@
 export GTK_IM_MODULE=ibus
+export PHPSTORM_JDK="$HOME/.jbr/jbr_jcef-21.0.9-linux-x64-b1038.75"
+export GOPATH="$HOME/.local/share/go"
+export GOBIN="$GOPATH/bin"
 
 ZDOTDIR="$HOME/.zsh"
 ZOXIDE_CMD_OVERRIDE="cd"
@@ -21,17 +24,6 @@ setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_find_no_dups
 
-# Exports
-export PHPENV_ROOT="/home/ricardo/.phpenv"
-if [ -d "${PHPENV_ROOT}" ]; then
-  export PATH="${PHPENV_ROOT}/bin:${PATH}"
-  eval "$(phpenv init -)"
-fi
-
-GOPATH="$HOME/.local/share/go"
-GOBIN="$GOPATH/bin"
-PATH="$PATH:$HOME/.local/bin:$HOME/.config/composer/vendor/bin:$GOBIN"
-
 # Aliases
 alias cat="bat"
 alias grep="rg"
@@ -41,8 +33,10 @@ alias lt='eza --tree --level=2 --long --icons --git'
 alias lta='lt -a'
 alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
 alias sail="./vendor/bin/sail"
+alias pint="./vendor/bin/pint"
 alias docker-compose="docker compose"
-alias t="tmux a || tmux"
+alias tmux="tmux a || tmux"
+alias vim="nvim"
 
 # Functions
 function clone() {
@@ -55,3 +49,6 @@ function clone() {
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# phpenv
+export PATH="$PATH:$HOME/.phpenv/bin"

@@ -38,7 +38,6 @@ blacklist = [
     "linguist",
     "mpv",
     "nm-connection-editor",
-    "nvidia-settings",
     "nvim",
     "org.fcitx.fcitx5-migrator",
     "org.fcitx.Fcitx5",

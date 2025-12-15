@@ -20,4 +20,4 @@ fi
 
 awww img $WALLPAPER --transition-type random
 
-notify-send "Awww" "Wallpaper updated"
+notify-send "Awww" "Wallpaper updated" -i /usr/share/icons/Numix-Circle/48/apps/preferences-desktop-wallpaper.svg

@@ -72,5 +72,15 @@
 	"custom/left_power": {
 		"format": "",
 		"tooltip": false
+	},
+
+	"custom/divider_left": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/divider_right": {
+		"format": "",
+		"tooltip": false
 	}
 }

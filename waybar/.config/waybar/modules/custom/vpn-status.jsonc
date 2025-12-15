@@ -1,0 +1,9 @@
+{
+  "custom/vpn-status": {
+    "exec": "~/.config/waybar/scripts/vpn-status.sh",
+    "return-type": "json",
+    "signal": 10,
+    "on-click": "~/.config/hypr/scripts/toggle_vpn.sh",
+    "hide-empty-text": true,
+  },
+}

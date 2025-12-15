@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+MONITORS_CONFIG=~/.config/hypr/conf/monitors.conf
+
+cat $MONITORS_CONFIG

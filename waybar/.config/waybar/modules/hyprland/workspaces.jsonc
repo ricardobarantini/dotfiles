@@ -25,7 +25,12 @@
     "on-scroll-down": "hyprctl dispatch workspace -1",
     "cursor": true,
     "format-icons": {
-      "special": ""
-    }
+      "active": "",
+      "default": "",
+      "empty": "",
+      "persistent": "",
+      "special": "",
+      "urgent": "",
+    },
   },
 }

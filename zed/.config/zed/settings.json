@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "calls": {
+    "mute_on_join": true
+  },
   "ssh_connections": [
     {
       "host": "192.168.1.160",
@@ -28,31 +31,40 @@
     }
   ],
 
-  "ui_font_family": "JetBrainsMonoNL Nerd Font",
-  "ui_font_size": 15,
+  "ui_font_family": "CaskaydiaCove Nerd Font",
+  "ui_font_size": 16,
 
+  "buffer_font_family": "CaskaydiaCove Nerd Font",
   "buffer_font_size": 15,
 
   "terminal": {
-    "font_family": "JetBrainsMonoNL Nerd Font Mono",
+    "font_family": "CaskaydiaCove Nerd Font",
     "line_height": "standard"
   },
 
   "theme": {
     "mode": "dark",
-    "light": "Catppuccin Latte",
-    "dark": "Catppuccin Frappé"
+    "light": "Nord Light",
+    "dark": "Nord Dark"
   },
 
   "icon_theme": "Catppuccin Frappé",
 
   "languages": {
     "PHP": {
-      "language_servers": ["intelephense", "phpcs", "phpactor"]
+      "language_servers": ["phpactor", "phpcs"]
     }
   },
 
   "lsp": {
+    "phpactor": {
+      "initialization_options": {
+        "language_server.diagnostic_ignore_codes": [
+          "worse.docblock_missing_param",
+          "worse.docblock_missing_return_type"
+        ]
+      }
+    },
     "phpcs": {
       "settings": {
         "standard": "PSR12"
@@ -61,6 +73,14 @@
   },
 
   "project_panel": {
+    "hide_hidden": false,
+    "hide_root": false,
+    "sticky_scroll": true,
+    "git_status": true,
+    "folder_icons": true,
+    "file_icons": true,
+    "entry_spacing": "comfortable",
+    "hide_gitignore": false,
     "default_width": 350
   },
 
