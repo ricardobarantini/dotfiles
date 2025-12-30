@@ -35,6 +35,16 @@ window#waybar.empty #windowcount {
   opacity: 0;
 }
 
+#window, #tray {
+  padding-left: 5px;
+  padding-right: 5px;
+  background: rgb(49, 50, 68);
+}
+
+#mpris {
+  padding-left: 5px;
+}
+
 #cpu,
 #memory,
 #disk,
@@ -55,7 +65,8 @@ window#waybar.empty #windowcount {
 #windowcount,
 #window,
 #tray,
-#custom-toggle-scheme {
+#custom-toggle-scheme,
+#mpris {
   color: rgb(205, 214, 244);
 }
 
@@ -64,19 +75,22 @@ window#waybar.empty #windowcount {
 }
 
 window#waybar.empty #window {
-  background: transparent;
+  background: rgb(49, 50, 68);
 }
 
-#custom-divider_left,
-#custom-divider_right {
-  color: rgb(30, 30, 46);
+#custom-divider_left_1,
+#custom-divider_left_2,
+#custom-divider_right_1,
+#custom-divider_right_2 {
   font-size: 25px;
 }
 
-#custom-divider_left {
-  margin-right: 5px;
+#custom-divider_left_1 {
+  background: rgb(49, 50, 68);
+  color: rgb(30, 30, 46);
 }
 
-#custom-divider_right {
-  margin-left: 5px;
+#custom-divider_right_1 {
+  background: rgb(49, 50, 68);
+  color: rgb(30, 30, 46);
 }

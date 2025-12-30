@@ -82,5 +82,25 @@
 	"custom/divider_right": {
 		"format": "",
 		"tooltip": false
+	},
+
+	"custom/divider_left_1": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/divider_left_2": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/divider_right_1": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/divider_right_2": {
+		"format": "",
+		"tooltip": false
 	}
 }

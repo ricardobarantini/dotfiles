@@ -13,6 +13,7 @@
     "~/.config/waybar/modules/cpu.jsonc",
     "~/.config/waybar/modules/disk.jsonc",
     "~/.config/waybar/modules/memory.jsonc",
+    "~/.config/waybar/modules/mpris.jsonc",
     "~/.config/waybar/modules/network.jsonc",
     "~/.config/waybar/modules/tray.jsonc",
     "~/.config/waybar/modules/wireplumber.jsonc",
@@ -25,15 +26,18 @@
 
   "modules-left": [
     "hyprland/workspaces#simple",
-    "custom/divider_left",
+    "custom/divider_left_1",
     "hyprland/window",
+    "custom/divider_left_2",
+    "mpris",
   ],
 
   "modules-center": ["clock"],
 
   "modules-right": [
+    "custom/divider_right_2",
     "tray",
-    "custom/divider_right",
+    "custom/divider_right_1",
     "custom/toggle-scheme",
     "wireplumber",
     "custom/vpn-status",
