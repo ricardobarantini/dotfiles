@@ -1,0 +1,12 @@
+[Unit]
+Description=Mako Notifications
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/mako
+Restart=on-failure
+
+[Install]
+WantedBy=graphical-session.target
+

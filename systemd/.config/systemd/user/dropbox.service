@@ -1,0 +1,9 @@
+[Unit]
+Description=Dropbox Daemon
+
+[Service]
+ExecStart=/usr/bin/dropbox-cli start -i
+Restart=on-failure
+
+[Install]
+WantedBy=graphical-session.target

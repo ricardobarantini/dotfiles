@@ -1,0 +1,12 @@
+[Unit]
+Description=Hypridle
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/hypridle
+Restart=always
+
+[Install]
+WantedBy=graphical-session.target
+
