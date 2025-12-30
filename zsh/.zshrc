@@ -52,3 +52,9 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # phpenv
 export PATH="$PATH:$HOME/.phpenv/bin"
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"
+
+# filen-cli
+PATH=$PATH:~/.filen-cli/bin
+
+eval "$(phpenv init -)"

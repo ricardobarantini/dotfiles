@@ -3,5 +3,3 @@ if [ -z "$TMUX" ] && [ -z "$DISPLAY" ] && [ -z "$WAYLAND_DISPLAY" ]; then
     exec uwsm start hyprland-uwsm.desktop
   fi
 fi
-
-eval "$(phpenv init -)"
