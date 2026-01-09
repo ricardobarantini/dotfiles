@@ -37,6 +37,8 @@ alias pint="./vendor/bin/pint"
 alias docker-compose="docker compose"
 alias tmux="tmux a || tmux"
 alias vim="nvim"
+alias gg="goto-ssh"
+alias copy="wl-copy"
 
 # Functions
 function clone() {
