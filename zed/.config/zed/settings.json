@@ -7,29 +7,22 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "calls": {
-    "mute_on_join": true
-  },
   "ssh_connections": [
     {
-      "host": "192.168.1.160",
+      "host": "10.138.0.3",
+      "args": [],
       "projects": [
         {
-          "paths": ["/home/ebtadmin/workspace/ebt_passport_v3"]
-        },
-        {
-          "paths": ["/home/ebtadmin/workspace/ebt_passport_versions/laravel-10"]
-        },
-        {
-          "paths": ["/home/ebtadmin/workspace/ebt_passport_versions/laravel-12"]
-        },
-        {
-          "paths": ["/home/ebtadmin/workspace/ebtapi_v3"]
+          "paths": [
+            "/home/forge/passport.dev1.ebtpassport.com"
+          ]
         }
-      ],
-      "nickname": "Dev 1"
+      ]
     }
   ],
+  "calls": {
+    "mute_on_join": true,
+  },
 
   "ui_font_family": "CaskaydiaCove Nerd Font",
   "ui_font_size": 16,
@@ -39,37 +32,35 @@
 
   "terminal": {
     "font_family": "CaskaydiaCove Nerd Font",
-    "line_height": "standard"
+    "line_height": "standard",
   },
 
   "theme": {
     "mode": "dark",
     "light": "Nord Light",
-    "dark": "Nord Dark"
+    "dark": "Nord Dark",
   },
 
   "icon_theme": "Catppuccin Frappé",
 
   "languages": {
     "PHP": {
-      "language_servers": ["phpactor", "phpcs"]
-    }
+      "language_servers": ["intelephense", "!phpactor", "phpcs"],
+    },
   },
 
   "lsp": {
     "phpactor": {
       "initialization_options": {
-        "language_server.diagnostic_ignore_codes": [
-          "worse.docblock_missing_param",
-          "worse.docblock_missing_return_type"
-        ]
-      }
+        "language_server.enable": "true",
+        "language_server.diagnostic_ignore_codes": "worse.docblock_missing_param,worse.docblock_missing_return_type,worse.syntax_error",
+      },
     },
     "phpcs": {
       "settings": {
-        "standard": "PSR12"
-      }
-    }
+        "standard": "PSR12",
+      },
+    },
   },
 
   "project_panel": {
@@ -81,26 +72,26 @@
     "file_icons": true,
     "entry_spacing": "comfortable",
     "hide_gitignore": false,
-    "default_width": 350
+    "default_width": 350,
   },
 
   "outline_panel": {
-    "default_width": 350
+    "default_width": 350,
   },
 
   "collaboration_panel": {
-    "default_width": 350
+    "default_width": 350,
   },
 
   "git_panel": {
-    "default_width": 350
+    "default_width": 350,
   },
 
   "notification_panel": {
-    "default_width": 350
+    "default_width": 350,
   },
 
   "agent": {
-    "default_width": 350
-  }
+    "default_width": 350,
+  },
 }
