@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 [[ -f ~/.config/user-dirs.dirs ]] && source ~/.config/user-dirs.dirs
-OUTPUT_DIR="${XDG_PICTURES_DIR:-$HOME/Pictures}"
+OUTPUT_DIR="${XDG_SCREENSHOTS_DIR:-$HOME/Pictures/Screenshots}"
 
 if [[ ! -d "$OUTPUT_DIR" ]]; then
   notify-send "Screenshot directory does not exist: $OUTPUT_DIR" -u critical -t 3000
@@ -13,5 +13,4 @@ pkill slurp || hyprshot -m ${1:-region} --raw |
     --output-filename "$OUTPUT_DIR/screenshot-$(date +'%Y-%m-%d_%H-%M-%S').png" \
     --early-exit \
     --actions-on-enter save-to-clipboard \
-    --save-after-copy \
     --copy-command 'wl-copy'
