@@ -1,3 +1,7 @@
+if command -v tmux > /dev/null && [ -z "$TMUX" ]; then
+  tmux attach || tmux new-session
+fi
+
 export GTK_IM_MODULE=ibus
 export PHPSTORM_JDK="$HOME/.jbr/jbr_jcef-21.0.9-linux-x64-b1038.75"
 export GOPATH="$HOME/.local/share/go"
