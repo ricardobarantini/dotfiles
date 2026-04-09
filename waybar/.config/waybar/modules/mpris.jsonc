@@ -1,17 +1,16 @@
 {
-    "mpris": {
-        "format": "{player_icon} {status_icon} {artist} - {title}",
-        "tooltip-format": "[LMB] Play/Pause\n[MMB] Previous Track\n[RMB] Next Track",
-        "player-icons": {
-            "spotify": ""
-        },
-        "status-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "ignored-players": [
-            "brave",
-            "firefox"
-        ]
-    }
+  "mpris": {
+    "format": "{player_icon} {status_icon} {artist} - {title}",
+    "tooltip-format": "[LMB] Play/Pause\n[MMB] Previous Track\n[RMB] Next Track",
+    "title-len": 32,
+    "player-icons": {
+      "spotify": "",
+    },
+    "status-icons": {
+      "paused": "",
+      "playing": "",
+    },
+    "ignored-players": ["brave", "firefox"],
+  },
 }
+
