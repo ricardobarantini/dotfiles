@@ -1,18 +1,21 @@
 {
-    "hyprland/window": {
-        "format": "{class} {title}",
-        "rewrite": {
-            "(.*).ghostty (.*)": "Terminal",
-            "(.*) - Brave": "Brave",
-            "(.*) - Slack": "Slack",
-            "(.*) Mozilla Firefox": "Mozilla Firefox",
-            "(.*) - (.*) - Cursor": "Cursor [$2]",
-            "(.*) - (.*) - Visual Studio Code": "Visual Studio Code [$2]",
-            "jetbrains-phpstorm (.*)": "PhpStorm",
-            "(.*) - Discord": "Discord",
-            "steam (.*)": "Steam",
-            "org.gnome.Nautilus (.*)": "Files"
-        },
-        "tooltip": false
-    }
+  "hyprland/window": {
+    "format": "{class} {title}",
+    "rewrite": {
+      "(.*).ghostty (.*)": "Terminal",
+      "(.*) - Brave": "Brave",
+      "(.*) - Slack": "Slack",
+      "(.*) Mozilla Firefox": "Mozilla Firefox",
+      "(.*) - (.*) - Cursor": "Cursor [$2]",
+      "(.*) - (.*) - Visual Studio Code": "Visual Studio Code [$2]",
+      "jetbrains-phpstorm (.*)": "PhpStorm",
+      "(.*) - Discord": "Discord",
+      "steam (.*)": "Steam",
+      "org.gnome.Nautilus (.*)": "Files",
+      "google-chrome (.*)": "Google Chrome",
+      "app.zen_browser.zen (.*)": "Zen Browser",
+    },
+    "tooltip": false,
+  },
 }
+

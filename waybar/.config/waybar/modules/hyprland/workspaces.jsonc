@@ -14,7 +14,7 @@
   },
 
   "hyprland/workspaces#simple": {
-    "format": "{icon}",
+    "format": "{name}",
     "all-outputs": true,
     "persistent-workspaces": {
       "*": [1, 2, 3, 4, 5],
